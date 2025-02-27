@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BallSim - Create Satisfying Ball Physics Simulations</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Primary Navigation Bar -->
+    <nav class="primary-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+                <div class="logo-animation"></div>
+            </div>
+            <a href="index.html" class="nav-item active">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Explore</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="featured.html">Featured Simulations</a>
+                    <a href="challenges.html">Community Challenges</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Learn</a>
+                <div class="dropdown-content">
+                    <a href="tutorials.html">Tutorials</a>
+                    <a href="documentation.html">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <a href="creator.html" class="create-button">Create</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search simulations...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-user"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="profile.html">My Profile</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="settings.html">Settings</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Appearance</a>
+                </div>
+            </div>
+            <button class="icon-button"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <span class="logo-text">BallSim</span>
+        </div>
+        <button class="mobile-search-toggle"><i class="fas fa-search"></i></button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item active">Home</a>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Explore</div>
+                <div class="mobile-dropdown-content">
+                    <a href="gallery.html" class="mobile-menu-item">Gallery</a>
+                    <a href="featured.html" class="mobile-menu-item">Featured Simulations</a>
+                    <a href="challenges.html" class="mobile-menu-item">Community Challenges</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Learn</div>
+                <div class="mobile-dropdown-content">
+                    <a href="tutorials.html" class="mobile-menu-item">Tutorials</a>
+                    <a href="documentation.html" class="mobile-menu-item">Documentation</a>
+                </div>
+            </div>
+            <a href="creator.html" class="mobile-menu-item highlight">Create</a>
+            <a href="profile.html" class="mobile-menu-item">My Profile</a>
+            <a href="settings.html" class="mobile-menu-item">Settings</a>
+            <a href="#" class="mobile-menu-item">Help & Support</a>
+        </div>
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="gallery.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="creator.html" class="mobile-bottom-nav-item highlight">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create</span>
+        </a>
+        <a href="profile.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div id="simulation-canvas" class="simulation-background"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Create Satisfying Ball Physics Simulations</h1>
+            <div class="hero-cta">
+                <a href="creator.html" class="button primary-button">Create New Simulation</a>
+                <a href="ai-generator.html" class="button secondary-button">Try AI Generator</a>
+                <a href="gallery.html" class="button tertiary-button">Explore Gallery</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Content -->
+    <section class="featured-content">
+        <div class="section-header">
+            <h2>Editor's Picks</h2>
+            <a href="featured.html" class="view-all">View All</a>
+        </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <!-- Simulation Cards would be generated dynamically -->
+                <div class="simulation-card">
+                    <div class="simulation-thumbnail"></div>
+                    <div class="simulation-info">
+                        <h3>Waterfall Cascade</h3>
+                        <span class="creator">by BallMaster</span>
+                        <a href="#" class="button small-button">Try It</a>
+                    </div>
+                </div>
+                <!-- More simulation cards... -->
+            </div>
+            <div class="carousel-pagination">
+                <span class="pagination-dot active"></span>
+                <span class="pagination-dot"></span>
+                <span class="pagination-dot"></span>
+            </div>
+        </div>
+        
+        <div class="section-header">
+            <h2>Popular Community Simulations</h2>
+            <a href="gallery.html" class="view-all">View All</a>
+        </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <!-- Simulation Cards would be generated dynamically -->
+                <div class="simulation-card">
+                    <div class="simulation-thumbnail"></div>
+                    <div class="simulation-info">
+                        <h3>Perpetual Motion Machine</h3>
+                        <span class="creator">by PhysicsNerd</span>
+                        <div class="engagement">
+                            <span><i class="fas fa-eye"></i> 1.2k</span>
+                            <span><i class="fas fa-heart"></i> 342</span>
+                        </div>
+                        <a href="#" class="button small-button">Try It</a>
+                    </div>
+                </div>
+                <!-- More simulation cards... -->
+            </div>
+            <div class="carousel-pagination">
+                <span class="pagination-dot active"></span>
+                <span class="pagination-dot"></span>
+                <span class="pagination-dot"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Achievement Progress -->
+    <section class="achievement-progress">
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 35%;"></div>
+        </div>
+        <div class="achievement-info">
+            <div class="latest-achievement">
+                <img src="images/achievement-icon.svg" alt="Latest Achievement">
+                <span class="tooltip">First Simulation Created</span>
+            </div>
+            <div class="achievement-stats">
+                <span>12/35 achievements unlocked</span>
+                <i class="fas fa-trophy"></i>
+            </div>
+            <button class="view-more-achievements">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+        <div class="next-achievements-dropdown">
+            <div class="achievement-item">
+                <img src="images/locked-achievement.svg" alt="Locked Achievement">
+                <div class="achievement-text">
+                    <h4>Physics Master</h4>
+                    <p>Create 10 simulations with at least 100 balls each</p>
+                </div>
+                <span class="progress">3/10</span>
+            </div>
+            <!-- More achievement items... -->
+        </div>
+    </section>
+    
+    <!-- Quick Start Section -->
+    <section class="quick-start">
+        <h2>Get Started Your Way</h2>
+        <div class="quick-start-options">
+            <div class="option-card">
+                <div class="option-preview ai-preview"></div>
+                <h3>AI-Generated Scenes</h3>
+                <p>Describe what you want and let AI create it for you</p>
+                <a href="ai-generator.html" class="button primary-button">Get Started</a>
+            </div>
+            <div class="option-card">
+                <div class="option-preview block-preview"></div>
+                <h3>Block Editor</h3>
+                <p>Drag and drop blocks to build your simulation visually</p>
+                <a href="block-editor.html" class="button primary-button">Get Started</a>
+            </div>
+            <div class="option-card">
+                <div class="option-preview code-preview"></div>
+                <h3>Code Editor</h3>
+                <p>Write JavaScript code directly for maximum control</p>
+                <a href="code-editor.html" class="button primary-button">Get Started</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Statistics Bar -->
+    <section class="statistics">
+        <div class="stat-item">
+            <span class="stat-number">2.5M+</span>
+            <span class="stat-label">Simulations Created</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">150K+</span>
+            <span class="stat-label">Community Members</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">35%</span>
+            <span class="stat-label">Achievement Progress</span>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BallSim</h3>
+                <p>BallSim is a platform for creating and sharing satisfying ball physics simulations. Express your creativity through motion!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="copyright.html">Copyright</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+                <p>Contact: <a href="mailto:support@ballsim.com">support@ballsim.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BallSim. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/simulation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
