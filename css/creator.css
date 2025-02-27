@@ -1,0 +1,180 @@
+/* Creator Page Styles */
+
+/* General Creator Layout */
+.creator-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Creator Header */
+.creator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #3a3a3a;
+    height: 60px;
+}
+
+.project-name-container {
+    display: flex;
+    align-items: center;
+}
+
+.project-name {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.project-name:hover, .project-name:focus {
+    background-color: #3a3a3a;
+    outline: none;
+}
+
+.creator-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: #3a3a3a;
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.action-button:hover {
+    background-color: #4a4a4a;
+}
+
+.action-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.save-button {
+    background-color: #2d6e3c;
+}
+
+.save-button:hover {
+    background-color: #3a8c4c;
+}
+
+.exit-button {
+    background-color: #6e2d2d;
+}
+
+.exit-button:hover {
+    background-color: #8c3a3a;
+}
+
+.status-indicators {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.save-status, .login-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.save-status.unsaved i {
+    color: #ff9800;
+}
+
+.save-status.saved i {
+    color: #4caf50;
+}
+
+.login-status.guest i {
+    color: #ff9800;
+}
+
+.login-status.logged-in i {
+    color: #4caf50;
+}
+
+/* Creator Mode Tabs */
+.creator-mode-tabs {
+    display: flex;
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #3a3a3a;
+    padding: 0 20px;
+}
+
+.mode-tab {
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.mode-tab:hover {
+    color: #fff;
+}
+
+.mode-tab.active {
+    color: #fff;
+}
+
+.mode-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #4c84ff;
+}
+
+/* Creator Content */
+.creator-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.creator-mode {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.creator-mode.active {
+    display: flex;
+}
+
+.left-panel, .right-panel {
+    width: 300px;
+    min-width: 300px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column
+}

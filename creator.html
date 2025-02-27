@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BallSim Creator - Design Your Physics Simulation</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/creator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="creator-page">
+    <!-- Primary Navigation Bar -->
+    <nav class="primary-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+                <div class="logo-animation"></div>
+            </div>
+            <a href="index.html" class="nav-item">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Explore</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="featured.html">Featured Simulations</a>
+                    <a href="challenges.html">Community Challenges</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Learn</a>
+                <div class="dropdown-content">
+                    <a href="tutorials.html">Tutorials</a>
+                    <a href="documentation.html">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <a href="creator.html" class="create-button active">Create</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search simulations...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-user"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="profile.html">My Profile</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="settings.html">Settings</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Appearance</a>
+                </div>
+            </div>
+            <button class="icon-button"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation (same as in main.html) -->
+    <nav class="mobile-nav">
+        <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <span class="logo-text">BallSim</span>
+        </div>
+        <button class="mobile-search-toggle"><i class="fas fa-search"></i></button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <!-- Same mobile menu as in main.html -->
+        <!-- Copy content from main.html -->
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <!-- Same mobile bottom nav as in main.html -->
+        <!-- Copy content from main.html -->
+    </div>
+    
+    <!-- Creator Header -->
+    <div class="creator-header">
+        <div class="project-name-container">
+            <input type="text" class="project-name" value="Untitled Simulation" placeholder="Project Name">
+            <i class="fas fa-edit"></i>
+        </div>
+        
+        <div class="creator-actions">
+            <button class="action-button save-button"><i class="fas fa-save"></i> Save</button>
+            <button class="action-button export-button" disabled><i class="fas fa-file-export"></i> Export</button>
+            <button class="action-button share-button" disabled><i class="fas fa-share-alt"></i> Share</button>
+            
+            <div class="dropdown">
+                <button class="action-button dropdown-toggle"><i class="fas fa-cog"></i> Settings</button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="#">Project Settings</a>
+                    <a href="#">Physics Settings</a>
+                    <a href="#">Visual Settings</a>
+                </div>
+            </div>
+            
+            <button class="action-button exit-button"><i class="fas fa-door-open"></i> Exit</button>
+        </div>
+        
+        <div class="status-indicators">
+            <span class="save-status unsaved"><i class="fas fa-circle"></i> Unsaved</span>
+            <span class="login-status guest"><i class="fas fa-user-clock"></i> Guest Mode</span>
+        </div>
+    </div>
+    
+    <!-- Creator Mode Tabs -->
+    <div class="creator-mode-tabs">
+        <button class="mode-tab active" data-mode="ai"><i class="fas fa-magic"></i> AI Generator</button>
+        <button class="mode-tab" data-mode="block"><i class="fas fa-th-large"></i> Block Editor</button>
+        <button class="mode-tab" data-mode="code"><i class="fas fa-code"></i> Code Editor</button>
+    </div>
+    
+    <!-- Creator Content Container -->
+    <div class="creator-content">
+        <!-- AI Generator Mode -->
+        <div class="creator-mode ai-mode active">
+            <div class="left-panel">
+                <h3>Generate with AI</h3>
+                <div class="prompt-input-container">
+                    <textarea placeholder="Describe the simulation you want to create...
+Examples:
+- A waterfall of balls cascading into a spiral
+- Balls bouncing between tilted platforms
+- A chain reaction of collisions"></textarea>
+                    <button class="generate-button">Generate <i class="fas fa-bolt"></i></button>
+                </div>
+                
+                <div class="prompt-history">
+                    <h4>Previous Prompts</h4>
+                    <ul class="history-list">
+                        <li>A rainbow-colored waterfall of bouncing balls</li>
+                        <li>Balls forming the shape of a heart</li>
+                    </ul>
+                </div>
+                
+                <div class="prompt-suggestions">
+                    <h4>Suggested Prompts</h4>
+                    <div class="suggestion-chips">
+                        <button class="suggestion-chip">Domino effect</button>
+                        <button class="suggestion-chip">Gravity well</button>
+                        <button class="suggestion-chip">Particle explosion</button>
+                        <button class="suggestion-chip">Newton's cradle</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-canvas">
+                <div class="simulation-container">
+                    <div class="placeholder-simulation">
+                        <i class="fas fa-cube fa-3x"></i>
+                        <p>Your simulation will appear here</p>
+                    </div>
+                    
+                    <div class="performance-indicator">
+                        <button class="toggle-perf"><i class="fas fa-eye"></i></button>
+                        <div class="perf-details compact">
+                            <span class="fps"><span class="fps-counter">60</span> FPS</span>
+                            <span class="object-count">Objects: <span class="object-counter">0</span></span>
+                            <span class="memory-usage">Memory: <span class="memory-counter">0</span> MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="panel-header">
+                    <h3>Simulation Parameters</h3>
+                    <button class="toggle-code-preview"><i class="fas fa-code"></i></button>
+                </div>
+                
+                <div class="code-preview collapsed">
+                    <pre><code>// Generated code will appear here
+function setupSimulation() {
+  // Physics parameters
+  const gravity = 9.8;
+  const friction = 0.1;
+  
+  // Create containers
+  // ...
+}</code></pre>
+                </div>
+                
+                <div class="parameters-container">
+                    <div class="parameter-group">
+                        <h4>Physics</h4>
+                        <div class="parameter">
+                            <label>Gravity</label>
+                            <input type="range" min="0" max="20" step="0.1" value="9.8">
+                            <span class="value">9.8</span>
+                        </div>
+                        <div class="parameter">
+                            <label>Friction</label>
+                            <input type="range" min="0" max="1" step="0.01" value="0.1">
+                            <span class="value">0.1</span>
+                        </div>
+                        <div class="parameter">
+                            <label>Ball Count</label>
+                            <input type="range" min="1" max="500" step="1" value="50">
+                            <span class="value">50</span>
+                        </div>
+                    </div>
+                    
+                    <div class="parameter-group">
+                        <h4>Appearance</h4>
+                        <div class="parameter">
+                            <label>Ball Size</label>
+                            <input type="range" min="5" max="50" step="1" value="20">
+                            <span class="value">20</span>
+                        </div>
+                        <div class="parameter">
+                            <label>Color Scheme</label>
+                            <select>
+                                <option>Rainbow</option>
+                                <option>Monochrome</option>
+                                <option>Gradient</option>
+                                <option>Custom</option>
+                            </select>
+                        </div>
+                        <div class="parameter">
+                            <label>Trail Effect</label>
+                            <select>
+                                <option>None</option>
+                                <option>Light</option>
+                                <option>Medium</option>
+                                <option>Heavy</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="export-options">
+                    <h4>Export Options</h4>
+                    <button class="save-video-button"><i class="fas fa-video"></i> Save as Video</button>
+                    <div class="video-options">
+                        <div class="video-option">
+                            <label>Quality</label>
+                            <select>
+                                <option>Low (480p)</option>
+                                <option selected>Medium (720p)</option>
+                                <option>High (1080p)</option>
+                            </select>
+                        </div>
+                        <div class="video-option">
+                            <label>Format</label>
+                            <select>
+                                <option>GIF</option>
+                                <option selected>MP4</option>
+                                <option>WebM</option>
+                            </select>
+                        </div>
+                        <div class="video-option">
+                            <label>Duration</label>
+                            <input type="number" min="1" max="30" value="10"> seconds
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Block Editor Mode (Initially Hidden) -->
+        <div class="creator-mode block-mode">
+            <div class="left-panel">
+                <div class="block-editor-tabs">
+                    <button class="block-tab active" data-category="physics">Physics</button>
+                    <button class="block-tab" data-category="objects">Objects</button>
+                    <button class="block-tab" data-category="events">Events</button>
+                    <button class="block-tab" data-category="effects">Effects</button>
+                </div>
+                
+                <div class="block-palette-search">
+                    <input type="text" placeholder="Search blocks...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="block-palette">
+                    <div class="block-category physics active">
+                        <div class="block" draggable="true" data-block-type="gravity">
+                            <i class="fas fa-arrow-down"></i> Set gravity
+                        </div>
+                        <div class="block" draggable="true" data-block-type="collision">
+                            <i class="fas fa-compress-alt"></i> Handle collision
+                        </div>
+                        <div class="block" draggable="true" data-block-type="force">
+                            <i class="fas fa-wind"></i> Apply force
+                        </div>
+                    </div>
+                    
+                    <div class="block-category objects">
+                        <div class="block" draggable="true" data-block-type="ball">
+                            <i class="fas fa-circle"></i> Create ball
+                        </div>
+                        <div class="block" draggable="true" data-block-type="container">
+                            <i class="fas fa-square-full"></i> Create container
+                        </div>
+                        <div class="block" draggable="true" data-block-type="zone">
+                            <i class="fas fa-vector-square"></i> Create zone
+                        </div>
+                    </div>
+                    
+                    <!-- Other block categories would go here -->
+                </div>
+                
+                <div class="workspace">
+                    <h4>Workspace</h4>
+                    <div class="workspace-area">
+                        <!-- Blocks would be dragged here -->
+                        <div class="workspace-placeholder">
+                            <p>Drag blocks from the palette and connect them here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-canvas">
+                <!-- Similar content as in AI mode -->
+                <div class="simulation-container">
+                    <div class="placeholder-simulation">
+                        <i class="fas fa-cube fa-3x"></i>
+                        <p>Your simulation will appear here</p>
+                    </div>
+                    
+                    <div class="simulation-controls">
+                        <button class="control-button build-mode active"><i class="fas fa-tools"></i> Build</button>
+                        <button class="control-button run-mode"><i class="fas fa-play"></i> Run</button>
+                    </div>
+                    
+                    <div class="performance-indicator">
+                        <!-- Same as in AI mode -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="panel-header">
+                    <h3>Inspector</h3>
+                </div>
+                
+                <div class="inspector-placeholder">
+                    <i class="fas fa-search fa-2x"></i>
+                    <p>Select an object to edit its properties</p>
+                </div>
+                
+                <div class="inspector-content" style="display: none;">
+                    <div class="object-header">
+                        <span class="object-type">Ball</span>
+                        <span class="object-id">#ball_1</span>
+                    </div>
+                    
+                    <div class="object-position">
+                        <label>Position</label>
+                        <div class="position-inputs">
+                            <div class="position-input">
+                                <span>X:</span>
+                                <input type="number" value="100">
+                            </div>
+                            <div class="position-input">
+                                <span>Y:</span>
+                                <input type="number" value="200">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="object-properties">
+                        <div class="property">
+                            <label>Size</label>
+                            <input type="number" min="1" max="100" value="20">
+                        </div>
+                        <div class="property">
+                            <label>Color</label>
+                            <input type="color" value="#ff0000">
+                        </div>
+                        <div class="property">
+                            <label>Density</label>
+                            <input type="number" min="0.1" max="10" step="0.1" value="1">
+                        </div>
+                        <div class="property">
+                            <label>Bounciness</label>
+                            <input type="number" min="0" max="1" step="0.01" value="0.8">
+                        </div>
+                    </div>
+                    
+                    <div class="object-events">
+                        <h4>Events</h4>
+                        <div class="event-list">
+                            <div class="event-item">
+                                <span>On Collision</span>
+                                <button class="edit-event"><i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+                        <button class="add-event"><i class="fas fa-plus"></i> Add Event</button>
+                    </div>
+                    
+                    <div class="debugging-section">
+                        <h4>Debug Info <button class="toggle-debug"><i class="fas fa-chevron-down"></i></button></h4>
+                        <div class="debug-info collapsed">
+                            <pre>Velocity: {x: 0.5, y: 1.2}
+Acceleration: {x: 0, y: 9.8}
+Active: true
+Collision count: 0</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Code Editor Mode (Initially Hidden) -->
+        <div class="creator-mode code-mode">
+            <div class="left-panel">
+                <div class="object-hierarchy">
+                    <h3>Object Hierarchy</h3>
+                    <div class="hierarchy-tree">
+                        <ul>
+                            <li class="tree-item expanded">
+                                <div class="tree-item-header">
+                                    <i class="fas fa-caret-down"></i>
+                                    <i class="fas fa-sitemap"></i>
+                                    <span>Scene</span>
+                                </div>
+                                <ul>
+                                    <li class="tree-item">
+                                        <div class="tree-item-header">
+                                            <i class="fas fa-caret-right"></i>
+                                            <i class="fas fa-circle"></i>
+                                            <span>Balls</span>
+                                        </div>
+                                    </li>
+                                    <li class="tree-item">
+                                        <div class="tree-item-header">
+                                            <i class="fas fa-caret-right"></i>
+                                            <i class="fas fa-square"></i>
+                                            <span>Containers</span>
+                                        </div>
+                                    </li>
+                                    <li class="tree-item">
+                                        <div class="tree-item-header">
+                                            <i class="fas fa-caret-right"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>Effects</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="resource-library">
+                    <h3>Resource Library</h3>
+                    <div class="resource-list">
+                        <div class="resource-category">
+                            <h4>Physics</h4>
+                            <ul>
+                                <li><i class="fas fa-puzzle-piece"></i> Gravity</li>
+                                <li><i class="fas fa-puzzle-piece"></i> Collision</li>
+                                <li><i class="fas fa-puzzle-piece"></i> Forces</li>
+                            </ul>
+                        </div>
+                        <div class="resource-category">
+                            <h4>UI Components</h4>
+                            <ul>
+                                <li><i class="fas fa-puzzle-piece"></i> Button</li>
+                                <li><i class="fas fa-puzzle-piece"></i> Slider</li>
+                                <li><i class="fas fa-puzzle-piece"></i> Toggle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-canvas">
+                <!-- Similar content as in other modes -->
+                <div class="simulation-container">
+                    <div class="placeholder-simulation">
+                        <i class="fas fa-cube fa-3x"></i>
+                        <p>Your simulation will appear here</p>
+                    </div>
+                    
+                    <div class="debug-overlay" style="display: none;">
+                        <!-- Debug information would appear here when enabled -->
+                        <div class="debug-item">Ball #1: v=(2.3, 1.5) pos=(100, 200)</div>
+                        <div class="debug-item">Container #1: collisions=5</div>
+                    </div>
+                    
+                    <div class="performance-indicator">
+                        <!-- Same as in other modes -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="code-editor-container">
+                    <div class="code-editor-header">
+                        <div class="file-tabs">
+                            <div class="file-tab active">main.js</div>
+                            <div class="file-tab">physics.js</div>
+                            <button class="add-file"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="editor-controls">
+                            <button class="docs-button" title="View Documentation"><i class="fas fa-book"></i></button>
+                            <button class="run-button" title="Run Simulation"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor">
+                        <pre><code>// BallSim Main Script
+const simulation = new BallSim.Simulation({
+  gravity: 9.8,
+  friction: 0.1,
+  width: 800,
+  height: 600
+});
+
+// Create a container (walls)
+const container = simulation.createContainer({
+  type: 'rectangle',
+  width: 800,
+  height: 600,
+  elasticity: 0.8
+});
+
+// Create balls
+for (let i = 0; i < 50; i++) {
+  simulation.createBall({
+    radius: 10 + Math.random() * 20,
+    mass: 1,
+    position: {
+      x: Math.random() * 700 + 50,
+      y: Math.random() * 500 + 50
+    },
+    velocity: {
+      x: Math.random() * 10 - 5,
+      y: Math.random() * 10 - 5
+    },
+    color: `hsl(${Math.random() * 360}, 80%, 60%)`
+  });
+}
+
+simulation.start();</code></pre>
+                    </div>
+                </div>
+                
+                <div class="console-output">
+                    <div class="console-header">
+                        <h4>Console</h4>
+                        <button class="clear-console"><i class="fas fa-trash"></i></button>
+                    </div>
+                    <div class="console-content">
+                        <div class="log-entry">Simulation initialized</div>
+                        <div class="log-entry">Created container: rectangle (800x600)</div>
+                        <div class="log-entry">Created 50 balls</div>
+                        <div class="log-entry error">Warning: High object count may impact performance</div>
+                    </div>
+                </div>
+                
+                <div class="docs-quick-access" style="display: none;">
+                    <div class="docs-header">
+                        <h4>Quick Documentation</h4>
+                        <button class="close-docs"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="docs-content">
+                        <h5>BallSim.Simulation</h5>
+                        <p>Creates a new simulation instance with the specified parameters.</p>
+                        <h6>Parameters:</h6>
+                        <ul>
+                            <li><code>gravity</code> (Number): Gravity force value (default: 9.8)</li>
+                            <li><code>friction</code> (Number): Global friction coefficient (default: 0.1)</li>
+                            <li><code>width</code> (Number): Width of simulation area</li>
+                            <li><code>height</code> (Number): Height of simulation area</li>
+                        </ul>
+                        <a href="#" class="view-full-docs">View Full Documentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Timeline Controls (Common to all modes) -->
+    <div class="timeline-controls">
+        <div class="playback-controls">
+            <button class="control-button"><i class="fas fa-step-backward"></i></button>
+            <button class="control-button play-pause"><i class="fas fa-play"></i></button>
+            <button class="control-button"><i class="fas fa-step-forward"></i></button>
+        </div>
+        
+        <div class="speed-control">
+            <span>Speed:</span>
+            <button class="speed-button" data-speed="0.25">0.25x</button>
+            <button class="speed-button" data-speed="0.5">0.5x</button>
+            <button class="speed-button active" data-speed="1">1x</button>
+            <button class="speed-button" data-speed="2">2x</button>
+            <button class="speed-button" data-speed="4">4x</button>
+        </div>
+        
+        <div class="performance-tier-selector">
+            <span>Performance:</span>
+            <button class="tier-button" data-tier="low">Low</button>
+            <button class="tier-button active" data-tier="medium">Medium</button>
+            <button class="tier-button" data-tier="high">High</button>
+        </div>
+        
+        <div class="timeline-extras">
+            <button class="toggle-resource-monitor"><i class="fas fa-chart-bar"></i></button>
+            <button class="frame-navigation"><i class="fas fa-film"></i></button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/creator.js"></script>
+</body>
+</html>
