@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BallSim Tutorials - Learn Physics Simulation</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tutorials.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="tutorials-page">
+    <!-- Primary Navigation Bar -->
+    <nav class="primary-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+                <div class="logo-animation"></div>
+            </div>
+            <a href="index.html" class="nav-item">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Explore</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="featured.html">Featured Simulations</a>
+                    <a href="challenges.html">Community Challenges</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle active">Learn</a>
+                <div class="dropdown-content">
+                    <a href="tutorials.html" class="active">Tutorials</a>
+                    <a href="documentation.html">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <a href="creator.html" class="create-button">Create</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search tutorials...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-user"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="profile.html">My Profile</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="settings.html">Settings</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Appearance</a>
+                </div>
+            </div>
+            <button class="icon-button"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <span class="logo-text">BallSim</span>
+        </div>
+        <button class="mobile-search-toggle"><i class="fas fa-search"></i></button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <!-- Same mobile menu as in main.html -->
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item">Home</a>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Explore</div>
+                <div class="mobile-dropdown-content">
+                    <a href="gallery.html" class="mobile-menu-item">Gallery</a>
+                    <a href="featured.html" class="mobile-menu-item">Featured Simulations</a>
+                    <a href="challenges.html" class="mobile-menu-item">Community Challenges</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown active">
+                <div class="mobile-dropdown-header">Learn</div>
+                <div class="mobile-dropdown-content" style="display: block;">
+                    <a href="tutorials.html" class="mobile-menu-item active">Tutorials</a>
+                    <a href="documentation.html" class="mobile-menu-item">Documentation</a>
+                </div>
+            </div>
+            <a href="creator.html" class="mobile-menu-item highlight">Create</a>
+            <a href="profile.html" class="mobile-menu-item">My Profile</a>
+            <a href="settings.html" class="mobile-menu-item">Settings</a>
+            <a href="#" class="mobile-menu-item">Help & Support</a>
+        </div>
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="gallery.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="creator.html" class="mobile-bottom-nav-item highlight">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create</span>
+        </a>
+        <a href="profile.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+    
+    <!-- Tutorials Header -->
+    <div class="tutorials-header">
+        <div class="header-content">
+            <h1>Learn Physics Simulation</h1>
+            <p>Step-by-step tutorials to help you master BallSim</p>
+            
+            <div class="progress-overview">
+                <div class="progress-stats">
+                    <div class="stat">
+                        <span class="stat-number completed-count">3</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number total-count">15</span>
+                        <span class="stat-label">Total Tutorials</span>
+                    </div>
+                    <div class="progress-percentage">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%;"></div>
+                        </div>
+                        <span>20% Complete</span>
+                    </div>
+                </div>
+                <div class="next-tutorial">
+                    <h3>Continue Learning</h3>
+                    <a href="tutorial-detail.html?id=4" class="next-tutorial-card">
+                        <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <div class="card-content">
+                            <h4>Working with Interactive Objects</h4>
+                            <p>Learn how to use springs, magnets, and other interactive elements</p>
+                            <span class="estimated-time"><i class="far fa-clock"></i> 15 minutes</span>
+                        </div>
+                        <div class="card-action">
+                            <span class="continue-btn">Continue <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Learning Tracks Tabs -->
+    <div class="learning-tracks-tabs">
+        <button class="track-tab active" data-track="all">All Tutorials</button>
+        <button class="track-tab" data-track="beginner">Beginner Track</button>
+        <button class="track-tab" data-track="intermediate">Intermediate Track</button>
+        <button class="track-tab" data-track="advanced">Advanced Track</button>
+    </div>
+    
+    <!-- Tutorials Content -->
+    <div class="tutorials-content">
+        <!-- Beginner Track -->
+        <div class="track-section" id="beginner-track">
+            <div class="track-header">
+                <h2>Beginner Track</h2>
+                <p>Start your journey with the fundamentals of BallSim</p>
+            </div>
+            
+            <div class="tutorials-grid">
+                <!-- Tutorial Card 1 -->
+                <a href="tutorial-detail.html?id=1" class="tutorial-card completed" data-track="beginner">
+                    <div class="completion-badge">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #4c84ff;"></div>
+                        <div class="tutorial-number">1</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Introduction to the Interface</h3>
+                        <p>Get familiar with BallSim's workspace and basic controls</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Beginner</span>
+                            <span class="duration"><i class="far fa-clock"></i> 10 min</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Tutorial Card 2 -->
+                <a href="tutorial-detail.html?id=2" class="tutorial-card completed" data-track="beginner">
+                    <div class="completion-badge">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #4e54c8;"></div>
+                        <div class="tutorial-number">2</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Creating Your First Simulation</h3>
+                        <p>Build a simple ball drop simulation from scratch</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Beginner</span>
+                            <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Tutorial Card 3 -->
+                <a href="tutorial-detail.html?id=3" class="tutorial-card completed" data-track="beginner">
+                    <div class="completion-badge">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #6a5acd;"></div>
+                        <div class="tutorial-number">3</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Understanding Physics Parameters</h3>
+                        <p>Learn how gravity, friction, and other physics settings affect your simulation</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Beginner</span>
+                            <span class="duration"><i class="far fa-clock"></i> 20 min</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Intermediate Track -->
+        <div class="track-section" id="intermediate-track">
+            <div class="track-header">
+                <h2>Intermediate Track</h2>
+                <p>Enhance your skills with more complex simulation techniques</p>
+            </div>
+            
+            <div class="tutorials-grid">
+                <!-- Tutorial Card 4 -->
+                <a href="tutorial-detail.html?id=4" class="tutorial-card" data-track="intermediate">
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #ff6b6b;"></div>
+                        <div class="tutorial-number">4</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Working with Interactive Objects</h3>
+                        <p>Learn how to use springs, magnets, and other interactive elements</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Intermediate</span>
+                            <span class="duration"><i class="far fa-clock"></i> 15 min</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Tutorial Card 5 -->
+                <a href="tutorial-detail.html?id=5" class="tutorial-card" data-track="intermediate">
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #ff9e9e;"></div>
+                        <div class="tutorial-number">5</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Advanced Collision Mechanics</h3>
+                        <p>Master different types of collisions and their physical properties</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Intermediate</span>
+                            <span class="duration"><i class="far fa-clock"></i> 25 min</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Tutorial Card 6 -->
+                <a href="tutorial-detail.html?id=6" class="tutorial-card" data-track="intermediate">
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #cf4f4f;"></div>
+                        <div class="tutorial-number">6</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Visual Effects and Trails</h3>
+                        <p>Add visual appeal to your simulations with particle effects and motion trails</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Intermediate</span>
+                            <span class="duration"><i class="far fa-clock"></i> 20 min</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Advanced Track -->
+        <div class="track-section" id="advanced-track">
+            <div class="track-header">
+                <h2>Advanced Track</h2>
+                <p>Master complex techniques and push the limits of BallSim</p>
+            </div>
+            
+            <div class="tutorials-grid">
+                <!-- Tutorial Card 7 -->
+                <a href="tutorial-detail.html?id=7" class="tutorial-card" data-track="advanced">
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #26c9b3;"></div>
+                        <div class="tutorial-number">7</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Complex Scene Creation</h3>
+                        <p>Design intricate multi-layered scenes with complex interactions</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Advanced</span>
+                            <span class="duration"><i class="far fa-clock"></i> 30 min</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Tutorial Card 8 -->
+                <a href="tutorial-detail.html?id=8" class="tutorial-card" data-track="advanced">
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #00b894;"></div>
+                        <div class="tutorial-number">8</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Performance Optimization</h3>
+                        <p>Learn techniques to optimize your simulations for better performance</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Advanced</span>
+                            <span class="duration"><i class="far fa-clock"></i> 25 min</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Tutorial Card 9 -->
+                <a href="tutorial-detail.html?id=9" class="tutorial-card" data-track="advanced">
+                    <div class="tutorial-thumbnail">
+                        <div class="thumbnail-image" style="background-color: #00a884;"></div>
+                        <div class="tutorial-number">9</div>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3>Custom Physics Rules</h3>
+                        <p>Create your own physics systems with custom rules and behaviors</p>
+                        <div class="tutorial-meta">
+                            <span class="difficulty"><i class="fas fa-signal"></i> Advanced</span>
+                            <span class="duration"><i class="far fa-clock"></i> 35 min</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Documentation Section -->
+    <div class="documentation-section">
+        <div class="documentation-header">
+            <h2>Documentation Resources</h2>
+            <p>Comprehensive references and guides for BallSim</p>
+            <a href="documentation.html" class="view-all-docs">View Full Documentation <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="documentation-cards">
+            <!-- Documentation Card 1 -->
+            <a href="documentation.html#api" class="doc-card">
+                <div class="doc-icon"><i class="fas fa-code"></i></div>
+                <div class="doc-info">
+                    <h3>API Reference</h3>
+                    <p>Complete listing of functions, methods, and properties</p>
+                </div>
+            </a>
+            
+            <!-- Documentation Card 2 -->
+            <a href="documentation.html#objects" class="doc-card">
+                <div class="doc-icon"><i class="fas fa-cube"></i></div>
+                <div class="doc-info">
+                    <h3>Object Types</h3>
+                    <p>Details on balls, containers, zones, and other objects</p>
+                </div>
+            </a>
+            
+            <!-- Documentation Card 3 -->
+            <a href="documentation.html#events" class="doc-card">
+                <div class="doc-icon"><i class="fas fa-bolt"></i></div>
+                <div class="doc-info">
+                    <h3>Event System</h3>
+                    <p>Learn about events, triggers, and callbacks</p>
+                </div>
+            </a>
+            
+            <!-- Documentation Card 4 -->
+            <a href="documentation.html#examples" class="doc-card">
+                <div class="doc-icon"><i class="fas fa-book"></i></div>
+                <div class="doc-info">
+                    <h3>Example Library</h3>
+                    <p>Code snippets and examples for common tasks</p>
+                </div>
+            </a>
+            
+            <!-- Documentation Card 5 -->
+            <a href="documentation.html#troubleshooting" class="doc-card">
+                <div class="doc-icon"><i class="fas fa-wrench"></i></div>
+                <div class="doc-info">
+                    <h3>Troubleshooting</h3>
+                    <p>Solutions for common issues and problems</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Tutorial Detail Modal -->
+    <div class="tutorial-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Understanding Physics Parameters</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="tutorial-video-container">
+                    <div class="tutorial-video">
+                        <!-- Video placeholder -->
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle fa-4x"></i>
+                            <p>Click to play tutorial video</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-content">
+                    <div class="tutorial-section">
+                        <h3>What You'll Learn</h3>
+                        <ul class="learning-objectives">
+                            <li>How gravity affects object movement</li>
+                            <li>Configuring friction and elasticity</li>
+                            <li>Understanding mass and density</li>
+                            <li>Fine-tuning collision responses</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tutorial-section">
+                        <h3>Gravity Settings</h3>
+                        <p>Gravity is one of the most fundamental physics parameters that affects how objects move in your simulation. In BallSim, gravity is represented as a vector with direction and magnitude.</p>
+                        
+                        <div class="tutorial-example">
+                            <div class="example-code">
+                                <pre><code>// Setting gravity (default is downward at 9.8)
+simulation.setGravity({
+  x: 0,
+  y: 9.8
+});</code></pre>
+                            </div>
+                            <p class="example-description">You can adjust the x and y components to change both the direction and strength of gravity. Setting both to zero creates a zero-gravity environment.</p>
+                        </div>
+                        
+                        <div class="try-it-yourself">
+                            <h4>Try It Yourself</h4>
+                            <p>Experiment with different gravity settings in this interactive demo:</p>
+                            <div class="interactive-demo">
+                                <div class="demo-canvas">
+                                    <!-- Interactive demo placeholder -->
+                                    <div class="demo-placeholder">
+                                        <p>Interactive demo would appear here</p>
+                                    </div>
+                                </div>
+                                <div class="demo-controls">
+                                    <div class="control-group">
+                                        <label>Gravity X:</label>
+                                        <input type="range" min="-10" max="10" value="0" step="0.1" id="gravity-x">
+                                        <span class="value">0</span>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>Gravity Y:</label>
+                                        <input type="range" min="-10" max="10" value="9.8" step="0.1" id="gravity-y">
+                                        <span class="value">9.8</span>
+                                    </div>
+                                    <button class="reset-demo">Reset Demo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-section">
+                        <h3>Friction and Elasticity</h3>
+                        <p>Friction affects how objects slow down when moving along surfaces, while elasticity (also called restitution) determines how bouncy objects are when they collide.</p>
+                        
+                        <div class="tutorial-example">
+                            <div class="example-code">
+                                <pre><code>// Setting surface friction (0-1, where 0 is frictionless)
+surface.setFriction(0.2);
+
+// Setting elasticity (0-1, where 1 is perfectly bouncy)
+ball.setElasticity(0.8);</code></pre>
+                            </div>
+                        </div>
+                        
+                        <!-- More content would go here -->
+                    </div>
+                    
+                    <div class="tutorial-navigation">
+                        <a href="tutorial-detail.html?id=2" class="prev-tutorial">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Previous<br>Creating Your First Simulation</span>
+                        </a>
+                        <a href="tutorial-detail.html?id=4" class="next-tutorial">
+                            <span>Next<br>Working with Interactive Objects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-sidebar">
+                    <div class="progress-tracker">
+                        <h3>Your Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <span class="progress-status">Completed</span>
+                    </div>
+                    
+                    <div class="tutorial-toc">
+                        <h3>In This Tutorial</h3>
+                        <ul>
+                            <li><a href="#" class="active">Gravity Settings</a></li>
+                            <li><a href="#">Friction and Elasticity</a></li>
+                            <li><a href="#">Mass and Density</a></li>
+                            <li><a href="#">Collision Responses</a></li>
+                            <li><a href="#">Advanced Parameters</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tutorial-resources">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-file-pdf"></i> Tutorial PDF</a></li>
+                            <li><a href="#"><i class="fas fa-file-code"></i> Example Code</a></li>
+                            <li><a href="#"><i class="fas fa-download"></i> Starter Project</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="related-tutorials">
+                        <h3>Related Tutorials</h3>
+                        <ul>
+                            <li><a href="tutorial-detail.html?id=4">Working with Interactive Objects</a></li>
+                            <li><a href="tutorial-detail.html?id=5">Advanced Collision Mechanics</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BallSim</h3>
+                <p>BallSim is a platform for creating and sharing satisfying ball physics simulations. Express your creativity through motion!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="copyright.html">Copyright</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+                <p>Contact: <a href="mailto:support@ballsim.com">support@ballsim.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BallSim. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/tutorials.js"></script>
+</body>
+</html>
