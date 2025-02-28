@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BallSim Gallery - Explore Physics Simulations</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="gallery-page">
+    <!-- Primary Navigation Bar -->
+    <nav class="primary-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+                <div class="logo-animation"></div>
+            </div>
+            <a href="index.html" class="nav-item">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle active">Explore</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html" class="active">Gallery</a>
+                    <a href="featured.html">Featured Simulations</a>
+                    <a href="challenges.html">Community Challenges</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Learn</a>
+                <div class="dropdown-content">
+                    <a href="tutorials.html">Tutorials</a>
+                    <a href="documentation.html">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <a href="creator.html" class="create-button">Create</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search simulations...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-user"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="profile.html">My Profile</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="settings.html">Settings</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Appearance</a>
+                </div>
+            </div>
+            <button class="icon-button"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <span class="logo-text">BallSim</span>
+        </div>
+        <button class="mobile-search-toggle"><i class="fas fa-search"></i></button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <!-- Same mobile menu as in main.html -->
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item">Home</a>
+            <div class="mobile-dropdown active">
+                <div class="mobile-dropdown-header">Explore</div>
+                <div class="mobile-dropdown-content" style="display: block;">
+                    <a href="gallery.html" class="mobile-menu-item active">Gallery</a>
+                    <a href="featured.html" class="mobile-menu-item">Featured Simulations</a>
+                    <a href="challenges.html" class="mobile-menu-item">Community Challenges</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Learn</div>
+                <div class="mobile-dropdown-content">
+                    <a href="tutorials.html" class="mobile-menu-item">Tutorials</a>
+                    <a href="documentation.html" class="mobile-menu-item">Documentation</a>
+                </div>
+            </div>
+            <a href="creator.html" class="mobile-menu-item highlight">Create</a>
+            <a href="profile.html" class="mobile-menu-item">My Profile</a>
+            <a href="settings.html" class="mobile-menu-item">Settings</a>
+            <a href="#" class="mobile-menu-item">Help & Support</a>
+        </div>
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="gallery.html" class="mobile-bottom-nav-item active">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="creator.html" class="mobile-bottom-nav-item highlight">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create</span>
+        </a>
+        <a href="profile.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+    
+    <!-- Gallery Header -->
+    <div class="gallery-header">
+        <div class="gallery-title">
+            <h1>Simulation Gallery</h1>
+            <p>Explore and interact with physics simulations created by the BallSim community</p>
+        </div>
+        
+        <div class="filter-container">
+            <div class="filter-group primary-filters">
+                <button class="filter-btn active" data-filter="popular">Popular</button>
+                <button class="filter-btn" data-filter="recent">Recent</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
+            </div>
+            
+            <div class="filter-group secondary-filters">
+                <div class="dropdown filter-dropdown">
+                    <button class="filter-dropdown-toggle">
+                        <span>Category</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" data-category="all" class="active">All Categories</a>
+                        <a href="#" data-category="physics">Physics Demo</a>
+                        <a href="#" data-category="game">Game Mechanics</a>
+                        <a href="#" data-category="art">Visual Art</a>
+                        <a href="#" data-category="educational">Educational</a>
+                        <a href="#" data-category="puzzle">Puzzle</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown filter-dropdown">
+                    <button class="filter-dropdown-toggle">
+                        <span>Complexity</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" data-complexity="all" class="active">All Levels</a>
+                        <a href="#" data-complexity="beginner">Beginner Friendly</a>
+                        <a href="#" data-complexity="intermediate">Intermediate</a>
+                        <a href="#" data-complexity="advanced">Advanced</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown filter-dropdown">
+                    <button class="filter-dropdown-toggle">
+                        <span>Performance</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" data-performance="all" class="active">All Requirements</a>
+                        <a href="#" data-performance="low">Low (Mobile Friendly)</a>
+                        <a href="#" data-performance="medium">Medium</a>
+                        <a href="#" data-performance="high">High</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filter-group sort-options">
+                <span>Sort by:</span>
+                <div class="dropdown sort-dropdown">
+                    <button class="sort-dropdown-toggle">
+                        <span>Most Liked</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" data-sort="likes" class="active">Most Liked</a>
+                        <a href="#" data-sort="views">Most Viewed</a>
+                        <a href="#" data-sort="updated">Recently Updated</a>
+                        <a href="#" data-sort="cloned">Most Cloned</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="active-filters">
+            <div class="filter-tag">
+                <span>Popular</span>
+                <button class="remove-filter"><i class="fas fa-times"></i></button>
+            </div>
+            <!-- More filter tags would appear here as selected -->
+        </div>
+    </div>
+    
+    <!-- Gallery Grid Container -->
+    <div class="gallery-container">
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Simulation Card 1 -->
+            <div class="simulation-card" data-category="physics" data-complexity="intermediate" data-performance="medium">
+                <div class="card-preview">
+                    <div class="preview-thumbnail" style="background-color: #4facfe;"></div>
+                    <div class="preview-overlay">
+                        <button class="preview-action-btn"><i class="fas fa-play"></i> Run</button>
+                    </div>
+                    <div class="performance-badge medium">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Medium</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="simulation-title">Gravity Well Experiment</h3>
+                    <div class="creator-info">
+                        <img src="images/avatars/avatar1.jpg" alt="Creator avatar" class="creator-avatar">
+                        <span class="creator-name">PhysicsNerd</span>
+                    </div>
+                    <p class="simulation-description">A realistic simulation of objects falling into a gravity well with adjustable parameters.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <span>1.2k</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span>342</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>56</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-btn run-btn"><i class="fas fa-play"></i> Run</button>
+                        <button class="card-btn clone-btn"><i class="fas fa-clone"></i> Clone</button>
+                        <button class="card-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simulation Card 2 -->
+            <div class="simulation-card" data-category="game" data-complexity="beginner" data-performance="low">
+                <div class="card-preview">
+                    <div class="preview-thumbnail" style="background-color: #8e2de2;"></div>
+                    <div class="preview-overlay">
+                        <button class="preview-action-btn"><i class="fas fa-play"></i> Run</button>
+                    </div>
+                    <div class="performance-badge low">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Low</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="simulation-title">Bouncing Ball Game</h3>
+                    <div class="creator-info">
+                        <img src="images/avatars/avatar2.jpg" alt="Creator avatar" class="creator-avatar">
+                        <span class="creator-name">GameDev123</span>
+                    </div>
+                    <p class="simulation-description">A simple game where you control a ball and avoid obstacles. Perfect for beginners!</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <span>856</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span>203</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>87</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-btn run-btn"><i class="fas fa-play"></i> Run</button>
+                        <button class="card-btn clone-btn"><i class="fas fa-clone"></i> Clone</button>
+                        <button class="card-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simulation Card 3 -->
+            <div class="simulation-card" data-category="art" data-complexity="advanced" data-performance="high">
+                <div class="card-preview">
+                    <div class="preview-thumbnail" style="background-color: #ff6b6b;"></div>
+                    <div class="preview-overlay">
+                        <button class="preview-action-btn"><i class="fas fa-play"></i> Run</button>
+                    </div>
+                    <div class="performance-badge high">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>High</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="simulation-title">Particle Art Canvas</h3>
+                    <div class="creator-info">
+                        <img src="images/avatars/avatar3.jpg" alt="Creator avatar" class="creator-avatar">
+                        <span class="creator-name">ArtisticCoder</span>
+                    </div>
+                    <p class="simulation-description">Create beautiful artwork using thousands of physics-based particles that respond to your mouse.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <span>2.7k</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span>589</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>42</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-btn run-btn"><i class="fas fa-play"></i> Run</button>
+                        <button class="card-btn clone-btn"><i class="fas fa-clone"></i> Clone</button>
+                        <button class="card-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simulation Card 4 -->
+            <div class="simulation-card" data-category="educational" data-complexity="intermediate" data-performance="medium">
+                <div class="card-preview">
+                    <div class="preview-thumbnail" style="background-color: #26c9b3;"></div>
+                    <div class="preview-overlay">
+                        <button class="preview-action-btn"><i class="fas fa-play"></i> Run</button>
+                    </div>
+                    <div class="performance-badge medium">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Medium</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="simulation-title">Orbital Mechanics</h3>
+                    <div class="creator-info">
+                        <img src="images/avatars/avatar4.jpg" alt="Creator avatar" class="creator-avatar">
+                        <span class="creator-name">SpaceExplorer</span>
+                    </div>
+                    <p class="simulation-description">Learn about planetary orbits with this interactive educational simulation.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <span>1.5k</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span>421</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>63</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-btn run-btn"><i class="fas fa-play"></i> Run</button>
+                        <button class="card-btn clone-btn"><i class="fas fa-clone"></i> Clone</button>
+                        <button class="card-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simulation Card 5 -->
+            <div class="simulation-card" data-category="puzzle" data-complexity="beginner" data-performance="low">
+                <div class="card-preview">
+                    <div class="preview-thumbnail" style="background-color: #ffc107;"></div>
+                    <div class="preview-overlay">
+                        <button class="preview-action-btn"><i class="fas fa-play"></i> Run</button>
+                    </div>
+                    <div class="performance-badge low">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Low</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="simulation-title">Ball Sorter Puzzle</h3>
+                    <div class="creator-info">
+                        <img src="images/avatars/avatar5.jpg" alt="Creator avatar" class="creator-avatar">
+                        <span class="creator-name">PuzzleMaster</span>
+                    </div>
+                    <p class="simulation-description">Sort the colored balls into the right containers by manipulating the environment.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <span>925</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span>178</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>24</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-btn run-btn"><i class="fas fa-play"></i> Run</button>
+                        <button class="card-btn clone-btn"><i class="fas fa-clone"></i> Clone</button>
+                        <button class="card-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simulation Card 6 -->
+            <div class="simulation-card" data-category="physics" data-complexity="advanced" data-performance="high">
+                <div class="card-preview">
+                    <div class="preview-thumbnail" style="background-color: #9c27b0;"></div>
+                    <div class="preview-overlay">
+                        <button class="preview-action-btn"><i class="fas fa-play"></i> Run</button>
+                    </div>
+                    <div class="performance-badge high">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>High</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="simulation-title">Fluid Dynamics Simulator</h3>
+                    <div class="creator-info">
+                        <img src="images/avatars/avatar6.jpg" alt="Creator avatar" class="creator-avatar">
+                        <span class="creator-name">FluidMaster</span>
+                    </div>
+                    <p class="simulation-description">Advanced fluid dynamics simulation with realistic water physics and interactions.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <span>3.2k</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span>672</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>38</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-btn run-btn"><i class="fas fa-play"></i> Run</button>
+                        <button class="card-btn clone-btn"><i class="fas fa-clone"></i> Clone</button>
+                        <button class="card-btn like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More simulation cards would go here -->
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="load-more-btn">Load More Simulations</button>
+        </div>
+    </div>
+    
+    <!-- Simulation Preview Modal -->
+    <div class="preview-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Gravity Well Experiment</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="simulation-preview-container">
+                    <div class="simulation-canvas">
+                        <!-- Simulation would run here -->
+                        <div class="placeholder-simulation">
+                            <i class="fas fa-spinner fa-spin fa-3x"></i>
+                            <p>Loading simulation...</p>
+                        </div>
+                    </div>
+                    <div class="preview-controls">
+                        <button class="control-btn play-pause"><i class="fas fa-pause"></i></button>
+                        <button class="control-btn restart"><i class="fas fa-redo"></i></button>
+                        <div class="speed-control">
+                            <span>Speed:</span>
+                            <button class="speed-btn" data-speed="0.5">0.5x</button>
+                            <button class="speed-btn active" data-speed="1">1x</button>
+                            <button class="speed-btn" data-speed="2">2x</button>
+                        </div>
+                        <button class="control-btn fullscreen"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="simulation-info">
+                    <div class="info-section creator-section">
+                        <img src="images/avatars/avatar1.jpg" alt="Creator avatar" class="creator-large-avatar">
+                        <div class="creator-details">
+                            <h3 class="creator-name">PhysicsNerd</h3>
+                            <span class="creation-date">Created: May 12, 2023</span>
+                            <span class="update-date">Last Updated: 2 days ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section description-section">
+                        <h3>Description</h3>
+                        <p>A realistic simulation of objects falling into a gravity well with adjustable parameters. This simulation demonstrates the principles of gravitational attraction and orbital mechanics in a simplified 2D environment.</p>
+                        <p>You can adjust the mass of the central object, add new particles, and see how they interact with the gravitational field.</p>
+                    </div>
+                    
+                    <div class="info-section engagement-section">
+                        <div class="engagement-stat">
+                            <i class="fas fa-eye"></i>
+                            <span>1,234 views</span>
+                        </div>
+                        <div class="engagement-stat">
+                            <i class="fas fa-heart"></i>
+                            <span>342 likes</span>
+                        </div>
+                        <div class="engagement-stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span>56 clones</span>
+                        </div>
+                        <div class="engagement-stat">
+                            <i class="fas fa-comments"></i>
+                            <span>28 comments</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section action-section">
+                        <button class="action-btn run-fullscreen-btn"><i class="fas fa-play"></i> Run in Full Screen</button>
+                        <button class="action-btn clone-edit-btn"><i class="fas fa-clone"></i> Clone and Edit</button>
+                        <button class="action-btn download-btn"><i class="fas fa-download"></i> Download Recording</button>
+                        <div class="social-share">
+                            <span>Share:</span>
+                            <button class="social-btn"><i class="fab fa-twitter"></i></button>
+                            <button class="social-btn"><i class="fab fa-facebook"></i></button>
+                            <button class="social-btn"><i class="fab fa-reddit"></i></button>
+                            <button class="social-btn"><i class="fas fa-link"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comments-section">
+                    <h3>Comments (28)</h3>
+                    <div class="comment-form">
+                        <img src="images/avatars/user-avatar.jpg" alt="Your avatar" class="comment-avatar">
+                        <textarea placeholder="Add a comment..."></textarea>
+                        <button class="post-comment-btn">Post</button>
+                    </div>
+                    
+                    <div class="comments-list">
+                        <div class="comment">
+                            <img src="images/avatars/avatar7.jpg" alt="Commenter avatar" class="comment-avatar">
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="commenter-name">ScienceGuy</span>
+                                    <span class="comment-time">2 days ago</span>
+                                </div>
+                                <p class="comment-text">This is an amazing simulation! I've been looking for something like this to demonstrate gravitational fields to my students. The visualization is very clear.</p>
+                                <div class="comment-actions">
+                                    <button class="comment-action-btn"><i class="fas fa-thumbs-up"></i> 12</button>
+                                    <button class="comment-action-btn"><i class="fas fa-thumbs-down"></i> 0</button>
+                                    <button class="comment-action-btn reply-btn">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <img src="images/avatars/avatar8.jpg" alt="Commenter avatar" class="comment-avatar">
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="commenter-name">CuriousLearner</span>
+                                    <span class="comment-time">1 week ago</span>
+                                </div>
+                                <p class="comment-text">I'm trying to understand the formulas used for the gravity calculations. Is this using the standard Newtonian gravitational formula or did you modify it for the 2D environment?</p>
+                                <div class="comment-actions">
+                                    <button class="comment-action-btn"><i class="fas fa-thumbs-up"></i> 5</button>
+                                    <button class="comment-action-btn"><i class="fas fa-thumbs-down"></i> 1</button>
+                                    <button class="comment-action-btn reply-btn">Reply</button>
+                                </div>
+                                
+                                <!-- Nested reply -->
+                                <div class="comment reply">
+                                    <img src="images/avatars/avatar1.jpg" alt="Creator avatar" class="comment-avatar">
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <span class="commenter-name">PhysicsNerd</span>
+                                            <span class="creator-badge">Creator</span>
+                                            <span class="comment-time">6 days ago</span>
+                                        </div>
+                                        <p class="comment-text">Great question! I'm using the standard Newtonian formula (F = G * m1 * m2 / r²) but I added a small modification to prevent infinite forces when objects get too close. I added a small constant to the denominator to smooth things out.</p>
+                                        <div class="comment-actions">
+                                            <button class="comment-action-btn"><i class="fas fa-thumbs-up"></i> 8</button>
+                                            <button class="comment-action-btn"><i class="fas fa-thumbs-down"></i> 0</button>
+                                            <button class="comment-action-btn reply-btn">Reply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- More comments would go here -->
+                    </div>
+                    
+                    <button class="load-more-comments-btn">Load More Comments</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BallSim</h3>
+                <p>BallSim is a platform for creating and sharing satisfying ball physics simulations. Express your creativity through motion!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="copyright.html">Copyright</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+                <p>Contact: <a href="mailto:support@ballsim.com">support@ballsim.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BallSim. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
