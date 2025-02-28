@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - BallSim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="profile-page">
+    <!-- Primary Navigation Bar -->
+    <nav class="primary-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+                <div class="logo-animation"></div>
+            </div>
+            <a href="index.html" class="nav-item">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Explore</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="featured.html">Featured Simulations</a>
+                    <a href="challenges.html">Community Challenges</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Learn</a>
+                <div class="dropdown-content">
+                    <a href="tutorials.html">Tutorials</a>
+                    <a href="documentation.html">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <a href="creator.html" class="create-button">Create</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search simulations...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle active"><i class="fas fa-user"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="profile.html" class="active">My Profile</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="settings.html">Settings</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Appearance</a>
+                </div>
+            </div>
+            <button class="icon-button"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <span class="logo-text">BallSim</span>
+        </div>
+        <button class="mobile-search-toggle"><i class="fas fa-search"></i></button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <!-- Same mobile menu as in main.html -->
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item">Home</a>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Explore</div>
+                <div class="mobile-dropdown-content">
+                    <a href="gallery.html" class="mobile-menu-item">Gallery</a>
+                    <a href="featured.html" class="mobile-menu-item">Featured Simulations</a>
+                    <a href="challenges.html" class="mobile-menu-item">Community Challenges</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Learn</div>
+                <div class="mobile-dropdown-content">
+                    <a href="tutorials.html" class="mobile-menu-item">Tutorials</a>
+                    <a href="documentation.html" class="mobile-menu-item">Documentation</a>
+                </div>
+            </div>
+            <a href="creator.html" class="mobile-menu-item highlight">Create</a>
+            <a href="profile.html" class="mobile-menu-item active">My Profile</a>
+            <a href="settings.html" class="mobile-menu-item">Settings</a>
+            <a href="#" class="mobile-menu-item">Help & Support</a>
+        </div>
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="gallery.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="creator.html" class="mobile-bottom-nav-item highlight">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create</span>
+        </a>
+        <a href="profile.html" class="mobile-bottom-nav-item active">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+    
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="profile-cover">
+            <button class="edit-cover"><i class="fas fa-camera"></i> Edit Cover</button>
+        </div>
+        
+        <div class="profile-info">
+            <div class="profile-avatar">
+                <img src="images/avatars/user-avatar.jpg" alt="User avatar">
+                <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+            </div>
+            
+            <div class="profile-details">
+                <div class="profile-name-container">
+                    <h1 class="profile-name">PhysicsMaster</h1>
+                    <button class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                </div>
+                
+                <div class="profile-bio">
+                    <p>Physics enthusiast creating satisfying simulations. Check out my YouTube channel for more content!</p>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-number">42</span>
+                        <span class="stat-label">Simulations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2.5k</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">189</span>
+                        <span class="stat-label">Following</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">76%</span>
+                        <span class="stat-label">Achievements</span>
+                    </div>
+                </div>
+                
+                <div class="profile-links">
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <button class="add-link-btn"><i class="fas fa-plus"></i> Add Link</button>
+                </div>
+            </div>
+            
+            <div class="showcase-badges">
+                <div class="badge-header">
+                    <h3>Achievement Showcase</h3>
+                    <button class="edit-showcase"><i class="fas fa-edit"></i> Edit</button>
+                </div>
+                <div class="badges-container">
+                    <div class="badge">
+                        <img src="images/badges/physics-master.svg" alt="Physics Master badge">
+                        <span class="badge-tooltip">Physics Master</span>
+                    </div>
+                    <div class="badge">
+                        <img src="images/badges/complex-creator.svg" alt="Complex Creator badge">
+                        <span class="badge-tooltip">Complex Creator</span>
+                    </div>
+                    <div class="badge">
+                        <img src="images/badges/community-favorite.svg" alt="Community Favorite badge">
+                        <span class="badge-tooltip">Community Favorite</span>
+                    </div>
+                    <div class="badge highlighted">
+                        <img src="images/badges/tutorial-master.svg" alt="Tutorial Master badge">
+                        <span class="badge-tooltip">Tutorial Master<br>Completed all tutorials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Profile Navigation -->
+    <div class="profile-nav">
+        <button class="nav-tab active" data-tab="simulations">My Simulations</button>
+        <button class="nav-tab" data-tab="favorites">Favorites</button>
+        <button class="nav-tab" data-tab="achievements">Achievement Progress</button>
+        <button class="nav-tab" data-tab="activity">Activity Feed</button>
+    </div>
+    
+    <!-- Profile Content -->
+    <div class="profile-content">
+        <!-- My Simulations Tab -->
+        <div class="profile-tab-content active" id="simulations-tab">
+            <div class="tab-header">
+                <h2>My Simulations</h2>
+                <div class="tab-controls">
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                    <select class="sort-select">
+                        <option value="recent">Recently Updated</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="alphabetical">Alphabetical</option>
+                    </select>
+                    <button class="create-new-btn"><i class="fas fa-plus"></i> Create New</button>
+                </div>
+            </div>
+            
+            <div class="simulations-container">
+                <div class="simulations-grid">
+                    <!-- Simulation Card 1 -->
+                    <div class="simulation-card">
+                        <div class="card-preview">
+                            <div class="preview-thumbnail" style="background-color: #4facfe;"></div>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                            <div class="privacy-badge public">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Gravity Well Experiment</h3>
+                            <div class="card-meta">
+                                <span class="date">Updated 2 days ago</span>
+                                <div class="stats">
+                                    <span><i class="fas fa-eye"></i> 1.2k</span>
+                                    <span><i class="fas fa-heart"></i> 342</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simulation Card 2 -->
+                    <div class="simulation-card">
+                        <div class="card-preview">
+                            <div class="preview-thumbnail" style="background-color: #8e2de2;"></div>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                            <div class="privacy-badge private">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Multi-Pendulum System</h3>
+                            <div class="card-meta">
+                                <span class="date">Updated 1 week ago</span>
+                                <div class="stats">
+                                    <span><i class="fas fa-eye"></i> -</span>
+                                    <span><i class="fas fa-heart"></i> -</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simulation Card 3 -->
+                    <div class="simulation-card">
+                        <div class="card-preview">
+                            <div class="preview-thumbnail" style="background-color: #ff6b6b;"></div>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                            <div class="privacy-badge public">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Elastic Collision Demo</h3>
+                            <div class="card-meta">
+                                <span class="date">Updated 2 weeks ago</span>
+                                <div class="stats">
+                                    <span><i class="fas fa-eye"></i> 756</span>
+                                    <span><i class="fas fa-heart"></i> 128</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simulation Card 4 -->
+                    <div class="simulation-card">
+                        <div class="card-preview">
+                            <div class="preview-thumbnail" style="background-color: #26c9b3;"></div>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                            <div class="privacy-badge unlisted">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Fluid Dynamics Test</h3>
+                            <div class="card-meta">
+                                <span class="date">Updated 3 weeks ago</span>
+                                <div class="stats">
+                                    <span><i class="fas fa-eye"></i> 32</span>
+                                    <span><i class="fas fa-heart"></i> 8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- More simulation cards would go here -->
+                </div>
+                
+                <!-- Load More Button -->
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+        
+        <!-- Favorites Tab -->
+        <div class="profile-tab-content" id="favorites-tab">
+            <div class="tab-header">
+                <h2>Favorites</h2>
+                <div class="tab-controls">
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                    <select class="sort-select">
+                        <option value="recent">Recently Added</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="alphabetical">Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="favorites-container">
+                <div class="favorites-grid">
+                    <!-- Favorite Card 1 -->
+                    <div class="simulation-card">
+                        <div class="card-preview">
+                            <div class="preview-thumbnail" style="background-color: #9c27b0;"></div>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                    <button class="favorite-btn active"><i class="fas fa-heart"></i></button>
+                                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Orbital Mechanics</h3>
+                            <div class="card-meta">
+                                <span class="creator">by SpaceExplorer</span>
+                                <div class="stats">
+                                    <span><i class="fas fa-eye"></i> 2.3k</span>
+                                    <span><i class="fas fa-heart"></i> 567</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Favorite Card 2 -->
+                    <div class="simulation-card">
+                        <div class="card-preview">
+                            <div class="preview-thumbnail" style="background-color: #ffc107;"></div>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                    <button class="favorite-btn active"><i class="fas fa-heart"></i></button>
+                                    <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Domino Chain Reaction</h3>
+                            <div class="card-meta">
+                                <span class="creator">by PhysicsWizard</span>
+                                <div class="stats">
+                                    <span><i class="fas fa-eye"></i> 987</span>
+                                    <span><i class="fas fa-heart"></i> 234</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- More favorite cards would go here -->
+                </div>
+                
+                <!-- Load More Button -->
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+        
+        <!-- Achievement Progress Tab -->
+        <div class="profile-tab-content" id="achievements-tab">
+            <div class="tab-header">
+                <h2>Achievement Progress</h2>
+                <div class="tab-controls">
+                    <select class="filter-select">
+                        <option value="all">All Achievements</option>
+                        <option value="unlocked">Unlocked Only</option>
+                        <option value="locked">Locked Only</option>
+                        <option value="progress">In Progress</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="overall-progress">
+                <div class="progress-stats">
+                    <div class="stat">
+                        <span class="stat-number">26/34</span>
+                        <span class="stat-label">Achievements Unlocked</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 76%;"></div>
+                        </div>
+                        <span class="progress-percentage">76% Complete</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievement-tracks">
+                <!-- Creator Track -->
+                <div class="achievement-track">
+                    <div class="track-header">
+                        <div class="track-info">
+                            <h3>Creator Track</h3>
+                            <span class="track-progress">8/10 Unlocked</span>
+                        </div>
+                        <div class="track-progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-list">
+                        <!-- Achievement Item 1 -->
+                        <div class="achievement-item unlocked">
+                            <div class="achievement-icon">
+                                <img src="images/badges/first-simulation.svg" alt="First Simulation badge">
+                            </div>
+                            <div class="achievement-details">
+                                <div class="achievement-header">
+                                    <h4>First Simulation</h4>
+                                    <span class="unlock-date">Unlocked on May 15, 2023</span>
+                                </div>
+                                <p class="achievement-description">Create and save your first simulation.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Item 2 -->
+                        <div class="achievement-item unlocked">
+                            <div class="achievement-icon">
+                                <img src="images/badges/ten-simulations.svg" alt="Simulation Explorer badge">
+                            </div>
+                            <div class="achievement-details">
+                                <div class="achievement-header">
+                                    <h4>Simulation Explorer</h4>
+                                    <span class="unlock-date">Unlocked on Jun 02, 2023</span>
+                                </div>
+                                <p class="achievement-description">Create 10 different simulations.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Item 3 -->
+                        <div class="achievement-item in-progress">
+                            <div class="achievement-icon">
+                                <img src="images/badges/simulation-master.svg" alt="Simulation Master badge">
+                            </div>
+                            <div class="achievement-details">
+                                <div class="achievement-header">
+                                    <h4>Simulation Master</h4>
+                                    <span class="progress-indicator">42/50 Simulations</span>
+                                </div>
+                                <p class="achievement-description">Create 50 different simulations.</p>
+                                <div class="mini-progress-bar">
+                                    <div class="mini-progress-fill" style="width: 84%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Item 4 -->
+                        <div class="achievement-item locked">
+                            <div class="achievement-icon">
+                                <img src="images/badges/locked.svg" alt="Locked badge">
+                            </div>
+                            <div class="achievement-details">
+                                <div class="achievement-header">
+                                    <h4>Physics Virtuoso</h4>
+                                    <span class="lock-message">Locked</span>
+                                </div>
+                                <p class="achievement-description">Create a simulation with at least 1000 interactive objects running at 60 FPS.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- More achievement items would go here -->
+                    </div>
+                </div>
+                
+                <!-- Community Track -->
+                <div class="achievement-track">
+                    <div class="track-header">
+                        <div class="track-info">
+                            <h3>Community Track</h3>
+                            <span class="track-progress">6/8 Unlocked</span>
+                        </div>
+                        <div class="track-progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-list">
+                        <!-- Achievement items would go here -->
+                        <div class="achievement-item unlocked">
+                            <div class="achievement-icon">
+                                <img src="images/badges/community-member.svg" alt="Community Member badge">
+                            </div>
+                            <div class="achievement-details">
+                                <div class="achievement-header">
+                                    <h4>Community Member</h4>
+                                    <span class="unlock-date">Unlocked on May 10, 2023</span>
+                                </div>
+                                <p class="achievement-description">Join the BallSim community by creating an account.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- More achievement items would go here -->
+                    </div>
+                </div>
+                
+                <!-- More achievement tracks would go here -->
+            </div>
+        </div>
+        
+        <!-- Activity Feed Tab -->
+        <div class="profile-tab-content" id="activity-tab">
+            <div class="tab-header">
+                <h2>Activity Feed</h2>
+                <div class="tab-controls">
+                    <select class="filter-select">
+                        <option value="all">All Activity</option>
+                        <option value="creations">Creations</option>
+                        <option value="likes">Likes</option>
+                        <option value="comments">Comments</option>
+                        <option value="achievements">Achievements</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="activity-feed">
+                <!-- Activity Item 1 -->
+                <div class="activity-item">
+                    <div class="activity-icon creation">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-text">You created a new simulation <a href="#">"Gravity Well Experiment"</a></p>
+                        <span class="activity-time">2 days ago</span>
+                    </div>
+                </div>
+                
+                <!-- Activity Item 2 -->
+                <div class="activity-item">
+                    <div class="activity-icon achievement">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-text">You earned the <span class="achievement-name">Tutorial Master</span> achievement</p>
+                        <span class="activity-time">3 days ago</span>
+                    </div>
+                </div>
+                
+                <!-- Activity Item 3 -->
+                <div class="activity-item">
+                    <div class="activity-icon like">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-text">You liked <a href="#">"Orbital Mechanics"</a> by <a href="#" class="user-link">SpaceExplorer</a></p>
+                        <span class="activity-time">5 days ago</span>
+                    </div>
+                </div>
+                
+                <!-- Activity Item 4 -->
+                <div class="activity-item">
+                    <div class="activity-icon comment">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-text">You commented on <a href="#">"Domino Chain Reaction"</a> by <a href="#" class="user-link">PhysicsWizard</a></p>
+                        <p class="comment-text">"Amazing work! How did you optimize the collision detection for so many objects?"</p>
+                        <span class="activity-time">1 week ago</span>
+                    </div>
+                </div>
+                
+                <!-- Activity Item 5 -->
+                <div class="activity-item">
+                    <div class="activity-icon update">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-text">You updated <a href="#">"Multi-Pendulum System"</a></p>
+                        <span class="activity-time">1 week ago</span>
+                    </div>
+                </div>
+                
+                <!-- More activity items would go here -->
+            </div>
+            
+            <!-- Load More Button -->
+            <button class="load-more-btn">Load More</button>
+        </div>
+    </div>
+    
+    <!-- More Options Dropdown -->
+    <div class="more-options-dropdown">
+        <ul>
+            <li><button class="rename-btn"><i class="fas fa-edit"></i> Rename</button></li>
+            <li><button class="duplicate-btn"><i class="fas fa-clone"></i> Duplicate</button></li>
+            <li><button class="download-btn"><i class="fas fa-download"></i> Download</button></li>
+            <li><button class="share-btn"><i class="fas fa-share-alt"></i> Share</button></li>
+            <li class="divider"></li>
+            <li><button class="archive-btn"><i class="fas fa-archive"></i> Archive</button></li>
+            <li><button class="delete-btn"><i class="fas fa-trash"></i> Delete</button></li>
+        </ul>
+    </div>
+    
+    <!-- Edit Profile Modal -->
+    <div class="modal-overlay">
+        <div class="modal profile-edit-modal">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form class="profile-edit-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" value="PhysicsMaster">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" rows="3">Physics enthusiast creating satisfying simulations. Check out my YouTube channel for more content!</textarea>
+                        <span class="character-count">125/150</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Social Links</label>
+                        <div class="social-links-editor">
+                            <div class="social-link-field">
+                                <div class="social-icon youtube">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <input type="text" placeholder="YouTube channel URL" value="https://youtube.com/c/PhysicsMaster">
+                                <button class="remove-link-btn"><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="social-link-field">
+                                <div class="social-icon twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <input type="text" placeholder="Twitter profile URL" value="https://twitter.com/PhysicsMaster">
+                                <button class="remove-link-btn"><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="social-link-field">
+                                <div class="social-icon instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <input type="text" placeholder="Instagram profile URL" value="https://instagram.com/PhysicsMaster">
+                                <button class="remove-link-btn"><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="social-link-field">
+                                <div class="social-icon tiktok">
+                                    <i class="fab fa-tiktok"></i>
+                                </div>
+                                <input type="text" placeholder="TikTok profile URL" value="https://tiktok.com/@PhysicsMaster">
+                                <button class="remove-link-btn"><i class="fas fa-times"></i></button>
+                            </div>
+                            <button class="add-social-link-btn"><i class="fas fa-plus"></i> Add Social Link</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BallSim</h3>
+                <p>BallSim is a platform for creating and sharing satisfying ball physics simulations. Express your creativity through motion!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="copyright.html">Copyright</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+                <p>Contact: <a href="mailto:support@ballsim.com">support@ballsim.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BallSim. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
