@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Simulations - BallSim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/featured.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="featured-page">
+    <!-- Primary Navigation Bar -->
+    <nav class="primary-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+                <div class="logo-animation"></div>
+            </div>
+            <a href="index.html" class="nav-item">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle active">Explore</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="featured.html" class="active">Featured Simulations</a>
+                    <a href="challenges.html">Community Challenges</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Learn</a>
+                <div class="dropdown-content">
+                    <a href="tutorials.html">Tutorials</a>
+                    <a href="documentation.html">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <a href="creator.html" class="create-button">Create</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search simulations...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-user"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="profile.html">My Profile</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="settings.html">Settings</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Appearance</a>
+                </div>
+            </div>
+            <button class="icon-button"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <span class="logo-text">BallSim</span>
+        </div>
+        <button class="mobile-search-toggle"><i class="fas fa-search"></i></button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <!-- Same mobile menu as in main.html -->
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item">Home</a>
+            <div class="mobile-dropdown active">
+                <div class="mobile-dropdown-header">Explore</div>
+                <div class="mobile-dropdown-content" style="display: block;">
+                    <a href="gallery.html" class="mobile-menu-item">Gallery</a>
+                    <a href="featured.html" class="mobile-menu-item active">Featured Simulations</a>
+                    <a href="challenges.html" class="mobile-menu-item">Community Challenges</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Learn</div>
+                <div class="mobile-dropdown-content">
+                    <a href="tutorials.html" class="mobile-menu-item">Tutorials</a>
+                    <a href="documentation.html" class="mobile-menu-item">Documentation</a>
+                </div>
+            </div>
+            <a href="creator.html" class="mobile-menu-item highlight">Create</a>
+            <a href="profile.html" class="mobile-menu-item">My Profile</a>
+            <a href="settings.html" class="mobile-menu-item">Settings</a>
+            <a href="#" class="mobile-menu-item">Help & Support</a>
+        </div>
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="gallery.html" class="mobile-bottom-nav-item active">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="creator.html" class="mobile-bottom-nav-item highlight">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create</span>
+        </a>
+        <a href="profile.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+    
+    <!-- Featured Header -->
+    <div class="featured-header">
+        <div class="featured-title">
+            <h1>Featured Simulations</h1>
+            <p>Handpicked by our team for exceptional creativity, physics implementation, and visual appeal</p>
+        </div>
+    </div>
+    
+    <!-- Featured Spotlight -->
+    <div class="spotlight-section">
+        <div class="spotlight-container">
+            <div class="spotlight-card">
+                <div class="spotlight-preview">
+                    <div class="preview-thumbnail" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                    <div class="spotlight-badge">
+                        <i class="fas fa-star"></i> Spotlight
+                    </div>
+                </div>
+                <div class="spotlight-content">
+                    <div class="spotlight-info">
+                        <h2>Fluid Dynamics Visualizer</h2>
+                        <div class="creator-info">
+                            <img src="images/avatars/avatar1.jpg" alt="Creator avatar" class="creator-avatar">
+                            <span class="creator-name">FluidMaster</span>
+                        </div>
+                        <p class="spotlight-description">Experience the beauty of fluid dynamics with this interactive simulation. Adjust viscosity, flow rate, and obstacle placement to see how fluids behave under different conditions. This simulation showcases the power of BallSim's physics engine with over 5,000 particle elements flowing in real-time.</p>
+                        <div class="spotlight-stats">
+                            <div class="stat">
+                                <i class="fas fa-eye"></i>
+                                <span>8.3k views</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-heart"></i>
+                                <span>1.2k likes</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code-branch"></i>
+                                <span>230 clones</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotlight-actions">
+                        <a href="player.html?id=fluid_dynamics" class="spotlight-button primary">
+                            <i class="fas fa-play"></i> Run Simulation
+                        </a>
+                        <a href="creator.html?clone=fluid_dynamics" class="spotlight-button secondary">
+                            <i class="fas fa-code"></i> Clone & Edit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Featured Categories -->
+    <div class="featured-categories">
+        <div class="category-navigation">
+            <button class="category-tab active" data-category="all">All Featured</button>
+            <button class="category-tab" data-category="physics">Physics Demos</button>
+            <button class="category-tab" data-category="art">Creative Art</button>
+            <button class="category-tab" data-category="games">Game Mechanics</button>
+            <button class="category-tab" data-category="educational">Educational</button>
+        </div>
+        
+        <div class="featured-grid-container">
+            <div class="featured-controls">
+                <div class="featured-count">
+                    <span>Showing 12 of 36 featured simulations</span>
+                </div>
+                <div class="featured-sort">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="recent">Recently Featured</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="educational">Most Educational</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Featured Simulations Grid -->
+            <div class="featured-grid">
+                <!-- Featured Card 1 -->
+                <div class="simulation-card" data-category="physics">
+                    <div class="card-preview">
+                        <div class="preview-thumbnail" style="background-color: #4e54c8;"></div>
+                        <div class="preview-overlay">
+                            <div class="preview-actions">
+                                <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                                <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <div class="badge-icon"><i class="fas fa-award"></i></div>
+                            <span class="badge-text">Editor's Choice</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Gravity Wells Explorer</h3>
+                        <div class="card-meta">
+                            <span class="creator">by AstroPhysics</span>
+                            <div class="stats">
+                                <span><i class="fas fa-eye"></i> 4.2k</span>
+                                <span><i class="fas fa-heart"></i> 895</span>
+                            </div>
+                        </div>
+                        <p class="card-description">An interactive demonstration of gravity wells and how objects orbit around them. Place multiple gravity sources and watch the particles react.</p>
+                    </div>
+                </div>
+                
+                <!-- Featured Card 2 -->
+                <div class="simulation-card" data-category="art">
+                    <div class="card-preview">
+                        <div class="preview-thumbnail" style="background-color: #ff6b6b;"></div>
+                        <div class="preview-overlay">
+                            <div class="preview-actions">
+                                <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                                <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <div class="badge-icon"><i class="fas fa-palette"></i></div>
+                            <span class="badge-text">Creative Excellence</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Particle Canvas</h3>
+                        <div class="card-meta">
+                            <span class="creator">by CreativeGenius</span>
+                            <div class="stats">
+                                <span><i class="fas fa-eye"></i> 6.7k</span>
+                                <span><i class="fas fa-heart"></i> 1.3k</span>
+                            </div>
+                        </div>
+                        <p class="card-description">Create beautiful artwork with thousands of colorful particles that respond to your cursor movements and form mesmerizing patterns.</p>
+                    </div>
+                </div>
+                
+                <!-- Featured Card 3 -->
+                <div class="simulation-card" data-category="games">
+                    <div class="card-preview">
+                        <div class="preview-thumbnail" style="background-color: #26c9b3;"></div>
+                        <div class="preview-overlay">
+                            <div class="preview-actions">
+                                <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                                <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <div class="badge-icon"><i class="fas fa-gamepad"></i></div>
+                            <span class="badge-text">Game Innovation</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">BallMaze Challenge</h3>
+                        <div class="card-meta">
+                            <span class="creator">by GameDevPro</span>
+                            <div class="stats">
+                                <span><i class="fas fa-eye"></i> 3.8k</span>
+                                <span><i class="fas fa-heart"></i> 742</span>
+                            </div>
+                        </div>
+                        <p class="card-description">Navigate a ball through increasingly difficult mazes by tilting the environment. Features 10 levels with physics-based puzzles.</p>
+                    </div>
+                </div>
+                
+                <!-- Featured Card 4 -->
+                <div class="simulation-card" data-category="educational">
+                    <div class="card-preview">
+                        <div class="preview-thumbnail" style="background-color: #ffc107;"></div>
+                        <div class="preview-overlay">
+                            <div class="preview-actions">
+                                <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                                <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <div class="badge-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <span class="badge-text">Educational Value</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Newton's Laws Explorer</h3>
+                        <div class="card-meta">
+                            <span class="creator">by PhysicsTeacher</span>
+                            <div class="stats">
+                                <span><i class="fas fa-eye"></i> 5.4k</span>
+                                <span><i class="fas fa-heart"></i> 921</span>
+                            </div>
+                        </div>
+                        <p class="card-description">An interactive demonstration of Newton's three laws of motion with real-time experimentation and detailed explanations.</p>
+                    </div>
+                </div>
+                
+                <!-- Featured Card 5 -->
+                <div class="simulation-card" data-category="physics">
+                    <div class="card-preview">
+                        <div class="preview-thumbnail" style="background-color: #9c27b0;"></div>
+                        <div class="preview-overlay">
+                            <div class="preview-actions">
+                                <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                                <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <div class="badge-icon"><i class="fas fa-atom"></i></div>
+                            <span class="badge-text">Physics Mastery</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Pendulum Waves</h3>
+                        <div class="card-meta">
+                            <span class="creator">by WavePhysics</span>
+                            <div class="stats">
+                                <span><i class="fas fa-eye"></i> 3.1k</span>
+                                <span><i class="fas fa-heart"></i> 567</span>
+                            </div>
+                        </div>
+                        <p class="card-description">A mesmerizing demonstration of pendulum waves, showing how simple pendulums of different lengths create complex wave patterns.</p>
+                    </div>
+                </div>
+                
+                <!-- Featured Card 6 -->
+                <div class="simulation-card" data-category="art">
+                    <div class="card-preview">
+                        <div class="preview-thumbnail" style="background-color: #8e2de2;"></div>
+                        <div class="preview-overlay">
+                            <div class="preview-actions">
+                                <button class="preview-btn"><i class="fas fa-play"></i></button>
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                                <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <div class="badge-icon"><i class="fas fa-magic"></i></div>
+                            <span class="badge-text">Visual Masterpiece</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Kaleidoscopic Balls</h3>
+                        <div class="card-meta">
+                            <span class="creator">by VisualArtist</span>
+                            <div class="stats">
+                                <span><i class="fas fa-eye"></i> 4.5k</span>
+                                <span><i class="fas fa-heart"></i> 876</span>
+                            </div>
+                        </div>
+                        <p class="card-description">A kaleidoscope simulation using mirror physics with colorful balls to create ever-changing symmetrical patterns as you interact.</p>
+                    </div>
+                </div>
+                
+                <!-- More featured cards would go here -->
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More Featured Simulations</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Nominations Section -->
+    <div class="nominations-section">
+        <div class="nominations-container">
+            <div class="nominations-header">
+                <h2>Know a Simulation That Should Be Featured?</h2>
+                <p>We're always looking for exceptional simulations to feature. If you've found or created something amazing, let us know!</p>
+            </div>
+            
+            <div class="nominations-actions">
+                <button class="nominate-btn">
+                    <i class="fas fa-award"></i> Nominate a Simulation
+                </button>
+                <a href="featured-criteria.html" class="criteria-link">Learn about our selection criteria</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Nomination Modal -->
+    <div class="modal-overlay" id="nomination-modal">
+        <div class="modal nomination-modal">
+            <div class="modal-header">
+                <h2>Nominate a Simulation</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form class="nomination-form">
+                    <div class="form-group">
+                        <label>Simulation URL or ID</label>
+                        <input type="text" placeholder="https://ballsim.com/s/123456 or simulation ID">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Why should this simulation be featured?</label>
+                        <textarea rows="4" placeholder="Tell us what makes this simulation special..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Category (select all that apply)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category-physics">
+                                <label for="category-physics">Physics Demo</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category-art">
+                                <label for="category-art">Creative Art</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category-game">
+                                <label for="category-game">Game Mechanics</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category-educational">
+                                <label for="category-educational">Educational</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category-other">
+                                <label for="category-other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Name (optional)</label>
+                        <input type="text" placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Email (optional)</label>
+                        <input type="email" placeholder="Your email">
+                        <p class="form-helper">We'll notify you if this simulation gets featured.</p>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="submit-btn">Submit Nomination</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BallSim</h3>
+                <p>BallSim is a platform for creating and sharing satisfying ball physics simulations. Express your creativity through motion!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="copyright.html">Copyright</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+                <p>Contact: <a href="mailto:support@ballsim.com">support@ballsim.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BallSim. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/featured.js"></script>
+</body>
+</html>
