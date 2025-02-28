@@ -1,0 +1,465 @@
+/* Authentication Pages Styles (Login, Signup, Password Reset) */
+
+/* Auth Container */
+.auth-page {
+    background-color: var(--neutral-50);
+}
+
+.auth-container {
+    display: flex;
+    max-width: 1200px;
+    margin: var(--space-xl) auto;
+    min-height: calc(100vh - 300px);
+}
+
+/* Auth Card */
+.auth-card {
+    flex: 1;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-xl);
+    max-width: 500px;
+    margin: 0 var(--space-md);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.auth-header h1 {
+    color: var(--neutral-900);
+    margin-bottom: var(--space-xs);
+    font-size: 2rem;
+}
+
+.auth-header p {
+    color: var(--neutral-600);
+}
+
+/* Auth Form */
+.auth-form {
+    margin-bottom: var(--space-xl);
+}
+
+.form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--neutral-700);
+    font-weight: 500;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--neutral-500);
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: var(--space-md) var(--space-md) var(--space-md) calc(var(--space-lg) + var(--space-md));
+    border: 1px solid var(--neutral-300);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input-with-icon input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.1);
+}
+
+.toggle-password {
+    position: absolute;
+    right: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--neutral-500);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.toggle-password:hover {
+    color: var(--neutral-700);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+}
+
+.remember-me label {
+    font-size: 0.9rem;
+    color: var(--neutral-600);
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.forgot-password:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.auth-button {
+    width: 100%;
+    padding: var(--space-md);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.auth-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.auth-button:active {
+    transform: translateY(1px);
+}
+
+/* Auth Divider */
+.auth-divider {
+    position: relative;
+    text-align: center;
+    margin: var(--space-lg) 0;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--neutral-200);
+}
+
+.auth-divider span {
+    position: relative;
+    background-color: white;
+    padding: 0 var(--space-md);
+    color: var(--neutral-500);
+    font-size: 0.9rem;
+}
+
+/* Social Auth */
+.social-auth {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.social-auth-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background-color: white;
+    border: 1px solid var(--neutral-300);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--neutral-700);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.social-auth-button:hover {
+    background-color: var(--neutral-100);
+    border-color: var(--neutral-400);
+}
+
+.social-auth-button.google i {
+    color: #DB4437;
+}
+
+.social-auth-button.github i {
+    color: #333;
+}
+
+/* Auth Footer */
+.auth-footer {
+    text-align: center;
+    color: var(--neutral-600);
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.auth-footer a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Auth Side Graphic */
+.auth-side-graphic {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+    display: none; /* Hidden on mobile by default */
+}
+
+.graphic-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    margin-bottom: var(--space-lg);
+}
+
+.physics-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.graphic-caption {
+    text-align: center;
+    max-width: 400px;
+}
+
+.graphic-caption h2 {
+    color: var(--neutral-900);
+    margin-bottom: var(--space-xs);
+    font-size: 1.5rem;
+}
+
+.graphic-caption p {
+    color: var(--neutral-600);
+}
+
+/* Simple Footer for Auth Pages */
+.auth-footer-links {
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+    background-color: white;
+    border-top: 1px solid var(--neutral-200);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.footer-links a {
+    color: var(--neutral-600);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-copyright {
+    color: var(--neutral-500);
+    font-size: 0.8rem;
+}
+
+/* Error Messages */
+.error-message {
+    color: #f44336;
+    font-size: 0.85rem;
+    margin-top: var(--space-xs);
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
+}
+
+.input-error {
+    border-color: #f44336 !important;
+}
+
+.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1) !important;
+}
+
+/* Password Strength Meter */
+.password-strength {
+    margin-top: var(--space-xs);
+}
+
+.strength-meter {
+    height: 4px;
+    background-color: var(--neutral-200);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-xs);
+    overflow: hidden;
+}
+
+.strength-fill {
+    height: 100%;
+    width: 0;
+    transition: width var(--transition-normal), background-color var(--transition-normal);
+}
+
+.strength-fill.weak {
+    width: 25%;
+    background-color: #f44336;
+}
+
+.strength-fill.medium {
+    width: 50%;
+    background-color: #ff9800;
+}
+
+.strength-fill.strong {
+    width: 75%;
+    background-color: #2196f3;
+}
+
+.strength-fill.very-strong {
+    width: 100%;
+    background-color: #4caf50;
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    color: var(--neutral-600);
+}
+
+/* Signup Form Specifics */
+.terms-agreement {
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.terms-agreement input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    accent-color: var(--primary-color);
+}
+
+.terms-agreement label {
+    font-size: 0.9rem;
+    color: var(--neutral-600);
+    line-height: 1.4;
+}
+
+.terms-agreement label a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.terms-agreement label a:hover {
+    text-decoration: underline;
+}
+
+/* Password Reset Specifics */
+.reset-instructions {
+    background-color: var(--neutral-100);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    font-size: 0.9rem;
+    color: var(--neutral-700);
+    line-height: 1.4;
+}
+
+.reset-success {
+    display: none;
+    background-color: #e8f5e9;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+.reset-success i {
+    color: #4caf50;
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.reset-success.visible {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+    .auth-side-graphic {
+        display: flex; /* Show on large screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .auth-card {
+        padding: var(--space-lg);
+    }
+    
+    .auth-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+    
+    .social-auth {
+        flex-direction: column;
+    }
+}

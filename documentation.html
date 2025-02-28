@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - BallSim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/documentation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="docs-page">
+    <!-- Primary Navigation Bar -->
+    <nav class="primary-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+                <div class="logo-animation"></div>
+            </div>
+            <a href="index.html" class="nav-item">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle">Explore</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="featured.html">Featured Simulations</a>
+                    <a href="challenges.html">Community Challenges</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item dropdown-toggle active">Learn</a>
+                <div class="dropdown-content">
+                    <a href="tutorials.html">Tutorials</a>
+                    <a href="documentation.html" class="active">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <a href="creator.html" class="create-button">Create</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search documentation..." id="docs-search">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-user"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="profile.html">My Profile</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="icon-button dropdown-toggle"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-content dropdown-right">
+                    <a href="settings.html">Settings</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Appearance</a>
+                </div>
+            </div>
+            <button class="icon-button"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <span class="logo-text">BallSim</span>
+        </div>
+        <button class="mobile-search-toggle"><i class="fas fa-search"></i></button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <!-- Same mobile menu as in main.html -->
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-text">BallSim</span>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item">Home</a>
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-header">Explore</div>
+                <div class="mobile-dropdown-content">
+                    <a href="gallery.html" class="mobile-menu-item">Gallery</a>
+                    <a href="featured.html" class="mobile-menu-item">Featured Simulations</a>
+                    <a href="challenges.html" class="mobile-menu-item">Community Challenges</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown active">
+                <div class="mobile-dropdown-header">Learn</div>
+                <div class="mobile-dropdown-content" style="display: block;">
+                    <a href="tutorials.html" class="mobile-menu-item">Tutorials</a>
+                    <a href="documentation.html" class="mobile-menu-item active">Documentation</a>
+                </div>
+            </div>
+            <a href="creator.html" class="mobile-menu-item highlight">Create</a>
+            <a href="profile.html" class="mobile-menu-item">My Profile</a>
+            <a href="settings.html" class="mobile-menu-item">Settings</a>
+            <a href="#" class="mobile-menu-item">Help & Support</a>
+        </div>
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="gallery.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="creator.html" class="mobile-bottom-nav-item highlight">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create</span>
+        </a>
+        <a href="profile.html" class="mobile-bottom-nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+    
+    <!-- Documentation Header -->
+    <div class="docs-header">
+        <div class="docs-header-content">
+            <h1>BallSim Documentation</h1>
+            <p>Comprehensive guides and references for creating physics simulations</p>
+            
+            <div class="docs-search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search documentation..." class="docs-search-input">
+            </div>
+            
+            <div class="docs-quick-links">
+                <a href="#api" class="quick-link-card">
+                    <i class="fas fa-code"></i>
+                    <span>API Reference</span>
+                </a>
+                <a href="#objects" class="quick-link-card">
+                    <i class="fas fa-cube"></i>
+                    <span>Object Types</span>
+                </a>
+                <a href="#events" class="quick-link-card">
+                    <i class="fas fa-bolt"></i>
+                    <span>Event System</span>
+                </a>
+                <a href="#examples" class="quick-link-card">
+                    <i class="fas fa-book"></i>
+                    <span>Examples</span>
+                </a>
+                <a href="#troubleshooting" class="quick-link-card">
+                    <i class="fas fa-wrench"></i>
+                    <span>Troubleshooting</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Documentation Layout -->
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="docs-toc">
+                <h3>Table of Contents</h3>
+                <nav class="toc-nav">
+                    <ul class="toc-list">
+                        <li class="toc-item">
+                            <a href="#overview" class="toc-link active">Overview</a>
+                        </li>
+                        <li class="toc-item has-children">
+                            <a href="#getting-started" class="toc-link">Getting Started</a>
+                            <ul class="toc-sublist">
+                                <li class="toc-subitem"><a href="#setup" class="toc-sublink">Setup</a></li>
+                                <li class="toc-subitem"><a href="#basic-concepts" class="toc-sublink">Basic Concepts</a></li>
+                                <li class="toc-subitem"><a href="#first-simulation" class="toc-sublink">Your First Simulation</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item has-children">
+                            <a href="#api" class="toc-link">API Reference</a>
+                            <ul class="toc-sublist">
+                                <li class="toc-subitem"><a href="#simulation-class" class="toc-sublink">Simulation Class</a></li>
+                                <li class="toc-subitem"><a href="#physics-engine" class="toc-sublink">Physics Engine</a></li>
+                                <li class="toc-subitem"><a href="#rendering" class="toc-sublink">Rendering</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item has-children">
+                            <a href="#objects" class="toc-link">Object Types</a>
+                            <ul class="toc-sublist">
+                                <li class="toc-subitem"><a href="#ball-object" class="toc-sublink">Ball</a></li>
+                                <li class="toc-subitem"><a href="#container-object" class="toc-sublink">Container</a></li>
+                                <li class="toc-subitem"><a href="#zone-object" class="toc-sublink">Zone</a></li>
+                                <li class="toc-subitem"><a href="#interactive-objects" class="toc-sublink">Interactive Objects</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item has-children">
+                            <a href="#events" class="toc-link">Event System</a>
+                            <ul class="toc-sublist">
+                                <li class="toc-subitem"><a href="#event-types" class="toc-sublink">Event Types</a></li>
+                                <li class="toc-subitem"><a href="#event-handlers" class="toc-sublink">Event Handlers</a></li>
+                                <li class="toc-subitem"><a href="#custom-events" class="toc-sublink">Custom Events</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item has-children">
+                            <a href="#examples" class="toc-link">Example Library</a>
+                            <ul class="toc-sublist">
+                                <li class="toc-subitem"><a href="#basic-examples" class="toc-sublink">Basic Examples</a></li>
+                                <li class="toc-subitem"><a href="#advanced-examples" class="toc-sublink">Advanced Examples</a></li>
+                            </ul>
+                        </li>
+                        <li class="toc-item has-children">
+                            <a href="#troubleshooting" class="toc-link">Troubleshooting</a>
+                            <ul class="toc-sublist">
+                                <li class="toc-subitem"><a href="#common-issues" class="toc-sublink">Common Issues</a></li>
+                                <li class="toc-subitem"><a href="#performance" class="toc-sublink">Performance Tips</a></li>
+                                <li class="toc-subitem"><a href="#faq" class="toc-sublink">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="docs-feedback">
+                <h4>Was this page helpful?</h4>
+                <div class="feedback-buttons">
+                    <button class="feedback-btn yes"><i class="fas fa-thumbs-up"></i> Yes</button>
+                    <button class="feedback-btn no"><i class="fas fa-thumbs-down"></i> No</button>
+                </div>
+                <div class="feedback-form" style="display: none;">
+                    <textarea placeholder="Tell us how we can improve this page"></textarea>
+                    <button class="send-feedback-btn">Send Feedback</button>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="docs-content">
+            <section class="doc-section" id="overview">
+                <h2>Overview</h2>
+                <p>BallSim is a physics simulation platform that allows you to create, share, and explore interactive ball physics simulations. This documentation provides comprehensive information about the BallSim API, object types, event system, and more.</p>
+                
+                <p>Whether you're a beginner looking to create your first simulation or an advanced user diving into custom physics rules, this documentation will help you make the most of BallSim's capabilities.</p>
+                
+                <div class="info-box">
+                    <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+                    <div class="info-content">
+                        <p>If you're new to BallSim, we recommend starting with the <a href="#getting-started">Getting Started</a> section, followed by the <a href="#first-simulation">Your First Simulation</a> guide.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="doc-section" id="getting-started">
+                <h2>Getting Started</h2>
+                <p>Welcome to BallSim! This section will help you get started with creating your first physics simulation.</p>
+                
+                <div class="doc-subsection" id="setup">
+                    <h3>Setup</h3>
+                    <p>There are three ways to create simulations with BallSim:</p>
+                    
+                    <div class="option-cards">
+                        <div class="option-card">
+                            <div class="option-icon"><i class="fas fa-magic"></i></div>
+                            <h4>AI Generator</h4>
+                            <p>Use AI to generate simulations from text descriptions. Perfect for quick creation without coding.</p>
+                            <a href="creator.html?mode=ai" class="option-link">Try AI Generator <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="option-card">
+                            <div class="option-icon"><i class="fas fa-th-large"></i></div>
+                            <h4>Block Editor</h4>
+                            <p>Create simulations using a visual programming interface with drag-and-drop blocks.</p>
+                            <a href="creator.html?mode=block" class="option-link">Try Block Editor <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="option-card">
+                            <div class="option-icon"><i class="fas fa-code"></i></div>
+                            <h4>Code Editor</h4>
+                            <p>Write JavaScript code directly for maximum control over your simulations.</p>
+                            <a href="creator.html?mode=code" class="option-link">Try Code Editor <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doc-subsection" id="basic-concepts">
+                    <h3>Basic Concepts</h3>
+                    <p>Before diving into creating simulations, it's helpful to understand some basic concepts used in BallSim:</p>
+                    
+                    <div class="concept-list">
+                        <div class="concept-item">
+                            <h4>Simulation</h4>
+                            <p>A simulation is the overall container for your physics scene. It manages the physics engine, rendering, and object interactions.</p>
+                        </div>
+                        
+                        <div class="concept-item">
+                            <h4>Objects</h4>
+                            <p>Physical elements in your simulation, such as balls, containers, and zones. Each object has properties that define its behavior.</p>
+                        </div>
+                        
+                        <div class="concept-item">
+                            <h4>Physics Parameters</h4>
+                            <p>Settings that control how objects interact, including gravity, friction, elasticity, and more.</p>
+                        </div>
+                        
+                        <div class="concept-item">
+                            <h4>Events</h4>
+                            <p>Triggers that occur during simulation, such as collisions, which can be used to create interactive behaviors.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doc-subsection" id="first-simulation">
+                    <h3>Your First Simulation</h3>
+                    <p>Let's create a simple bouncing ball simulation using the Code Editor. This example demonstrates the basic structure of a BallSim simulation:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>// Initialize a new simulation
+const simulation = new BallSim.Simulation({
+  width: 800,
+  height: 600,
+  gravity: 9.8,
+  friction: 0.1
+});
+
+// Create a container (walls)
+const walls = simulation.createContainer({
+  type: 'rectangle',
+  width: 800,
+  height: 600,
+  elasticity: 0.8
+});
+
+// Create a ball
+const ball = simulation.createBall({
+  radius: 30,
+  position: { x: 400, y: 100 },
+  velocity: { x: 2, y: 0 },
+  color: '#4e54c8',
+  elasticity: 0.9
+});
+
+// Start the simulation
+simulation.start();</code></pre>
+                    </div>
+                    
+                    <p>This code creates a simple simulation with a single ball bouncing within a rectangular container. The ball will fall due to gravity and bounce off the walls with slight energy loss (elasticity less than 1).</p>
+                    
+                    <div class="action-buttons">
+                        <a href="creator.html?mode=code&template=basic" class="doc-button primary-doc-button">Try This Example</a>
+                        <a href="#examples" class="doc-button secondary-doc-button">More Examples</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="doc-section" id="api">
+                <h2>API Reference</h2>
+                <p>The BallSim API provides a comprehensive set of classes and methods for creating and controlling physics simulations.</p>
+                
+                <div class="doc-subsection" id="simulation-class">
+                    <h3>Simulation Class</h3>
+                    <p>The <code>Simulation</code> class is the main entry point for creating and managing simulations.</p>
+                    
+                    <div class="api-card">
+                        <h4 class="api-title">Constructor</h4>
+                        <div class="api-signature">
+                            <code>new BallSim.Simulation(options)</code>
+                        </div>
+                        <div class="api-description">
+                            <p>Creates a new simulation instance with the specified options.</p>
+                        </div>
+                        <div class="api-params">
+                            <h5>Parameters:</h5>
+                            <table class="params-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                        <th>Default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>options.width</td>
+                                        <td>Number</td>
+                                        <td>Width of the simulation area in pixels</td>
+                                        <td>800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>options.height</td>
+                                        <td>Number</td>
+                                        <td>Height of the simulation area in pixels</td>
+                                        <td>600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>options.gravity</td>
+                                        <td>Number</td>
+                                        <td>Gravity force (positive values point downward)</td>
+                                        <td>9.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>options.friction</td>
+                                        <td>Number</td>
+                                        <td>Global friction coefficient (0-1)</td>
+                                        <td>0.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>options.timeScale</td>
+                                        <td>Number</td>
+                                        <td>Simulation speed multiplier</td>
+                                        <td>1.0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="api-example">
+                            <h5>Example:</h5>
+                            <pre><code>const simulation = new BallSim.Simulation({
+  width: 1000,
+  height: 800,
+  gravity: 9.8,
+  friction: 0.2,
+  timeScale: 1.5
+});</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4 class="api-title">Methods</h4>
+                        <div class="api-methods-list">
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.start()</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Starts the simulation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.pause()</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Pauses the simulation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.reset()</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Resets the simulation to its initial state.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.createBall(options)</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Creates a new ball object and adds it to the simulation.</p>
+                                    <p>See <a href="#ball-object">Ball Object</a> for options.</p>
+                                </div>
+                                <div class="api-returns">
+                                    <p>Returns: Ball object</p>
+                                </div>
+                            </div>
+                            
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.createContainer(options)</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Creates a new container object and adds it to the simulation.</p>
+                                    <p>See <a href="#container-object">Container Object</a> for options.</p>
+                                </div>
+                                <div class="api-returns">
+                                    <p>Returns: Container object</p>
+                                </div>
+                            </div>
+                            
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.createZone(options)</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Creates a new zone object and adds it to the simulation.</p>
+                                    <p>See <a href="#zone-object">Zone Object</a> for options.</p>
+                                </div>
+                                <div class="api-returns">
+                                    <p>Returns: Zone object</p>
+                                </div>
+                            </div>
+                            
+                            <!-- More methods would be listed here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doc-subsection" id="physics-engine">
+                    <h3>Physics Engine</h3>
+                    <p>The physics engine handles all calculations related to object movement, collisions, and forces.</p>
+                    
+                    <!-- Physics Engine API details would go here -->
+                    <div class="api-card">
+                        <h4 class="api-title">Properties</h4>
+                        <div class="api-properties-list">
+                            <div class="api-property">
+                                <div class="api-signature">
+                                    <code>simulation.physics.gravity</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>The gravity vector applied to all objects in the simulation.</p>
+                                </div>
+                                <div class="api-type">
+                                    <p>Type: Object { x: Number, y: Number }</p>
+                                </div>
+                            </div>
+                            
+                            <div class="api-property">
+                                <div class="api-signature">
+                                    <code>simulation.physics.friction</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>The global friction coefficient applied to all objects in the simulation.</p>
+                                </div>
+                                <div class="api-type">
+                                    <p>Type: Number (0-1)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- More properties would be listed here -->
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4 class="api-title">Methods</h4>
+                        <div class="api-methods-list">
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.physics.setGravity(x, y)</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Sets the gravity vector for the simulation.</p>
+                                </div>
+                                <div class="api-params">
+                                    <p>x: Number - The x component of gravity vector</p>
+                                    <p>y: Number - The y component of gravity vector</p>
+                                </div>
+                            </div>
+                            
+                            <div class="api-method">
+                                <div class="api-signature">
+                                    <code>simulation.physics.applyForce(object, forceX, forceY)</code>
+                                </div>
+                                <div class="api-description">
+                                    <p>Applies a force to a specific object.</p>
+                                </div>
+                                <div class="api-params">
+                                    <p>object: Object - The object to apply force to</p>
+                                    <p>forceX: Number - The x component of the force</p>
+                                    <p>forceY: Number - The y component of the force</p>
+                                </div>
+                            </div>
+                            
+                            <!-- More methods would be listed here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doc-subsection" id="rendering">
+                    <h3>Rendering</h3>
+                    <p>The rendering system handles drawing objects to the screen and visual effects.</p>
+                    
+                    <!-- Rendering API details would go here -->
+                    
+                    <div class="note-box">
+                        <div class="note-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="note-content">
+                            <p>For detailed information on customizing visual effects, see the <a href="tutorials.html?id=6">Visual Effects and Trails</a> tutorial.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Additional documentation sections would be added here -->
+            
+            <div class="docs-nav-buttons">
+                <a href="#overview" class="doc-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#api" class="doc-nav-button next">
+                    <span>API Reference</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Documentation Footer -->
+    <footer class="docs-footer">
+        <div class="docs-footer-content">
+            <div class="docs-footer-links">
+                <div class="footer-col">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="#api">API Reference</a></li>
+                        <li><a href="#objects">Object Types</a></li>
+                        <li><a href="#events">Event System</a></li>
+                        <li><a href="#examples">Example Library</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Learning Resources</h4>
+                    <ul>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="#">Video Guides</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools & Resources</h4>
+                    <ul>
+                        <li><a href="creator.html">Creator Environment</a></li>
+                        <li><a href="#">Code Snippets</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Release Notes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Bug Reports</a></li>
+                        <li><a href="#">Feature Requests</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="docs-footer-bottom">
+                <p>BallSim Documentation v2.5.0 | Last updated: February 15, 2025 | <a href="#">Contribute to Docs</a></p>
+                <p>&copy; 2025 BallSim. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="js/main.js"></script>
+    <script src="js/documentation.js"></script>
+</body>
+</html>
